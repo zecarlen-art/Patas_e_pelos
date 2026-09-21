@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Inicio Header */
+
+header {
+    background-color: #FFF4E6;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 28px;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+}
+
+/* Logo */
+
+.popplio img {
+    width: 100px;
+    height: auto;
+    display: block;
+}
+
+/* Menu */
+
+.brionne {
+    display: flex;
+    align-items: center;
+}
+
+.primarina {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.primarina a {
+    text-decoration: none;
+    color: #5DADE2;
+    padding: 20px;
+}
+
+.primarina a:hover {
+    color: #5DADE2;
+}
+
+/* Fim do Header */
+
+/* Inicio do Main*/
+.Rowlet{
+    width: 100%;
+background-color: #000;
+height: calc(100vh - 80px);
+background-image: url("convivencia-capa.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+display: flex;
+align-items: center;
+padding-left: 10%;
+}
+
+.Rowlet h1{
+    color: #8B5E3C;
+    font-size: 54px;
+}
+.Rowlet p{
+font-size: 24px;
+font-style: italic;
+color: #1e96FC;
+margin-top: 10px;
+margin-bottom: 35px;
+}
+
+/* Fim do Main*/
