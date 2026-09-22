@@ -82,9 +82,70 @@ padding-left: 10%;
 .Rowlet p{
 font-size: 24px;
 font-style: italic;
-color: #1e96FC;
+color: #5DADE2;
 margin-top: 10px;
 margin-bottom: 35px;
 }
 
 /* Fim do Main*/
+
+/*inicio do sobre*/
+.Dartrix{
+    background-color:#8B5E3C ;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Dartrix div{
+    max-width: 50%;
+    padding-right: 40px;
+
+}
+
+.Dartrix img{
+    max-width: 750px;
+    border-radius: 9px;
+    box-shadow: 9px 9px 18px #FFF4E6;
+    
+}
+
+.Dartrix div h2{
+    font-size: 42px;
+    margin-bottom: 24px;
+    color: #5DADE2;
+}
+
+.Dartrix p{
+    color: #ffe4c1;
+    font-size: 20px;
+}
+/* Fim do sobre"
+
+/* Inicio do Rodape*/
+.Decidueye {
+    width: 100%;
+    background-color:#f3cf9f;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:#5DADE2;
+}
+
+.Decidueye a {
+    text-decoration: none;
+    color:#5DADE2;
+}
+
+.Decidueye p {
+    margin-left: 12px;
+
+}
+/*Fim do Rodape*/
