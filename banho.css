@@ -61,14 +61,12 @@ header {
 }
 
 /* Fim do Header */
+/*inicio Main*/
 
-/* Inicio do Main*/
-.Rowlet{
+.litten{
     width: 100%;
-background-color: #000;
+background-color:#E8D5BE;
 height: calc(100vh - 80px);
-background-image: url("convivencia-capa.jpg");
-background-repeat: no-repeat;
 background-size: cover;
 background-position: center;
 display: flex;
@@ -76,77 +74,71 @@ align-items: center;
 padding-left: 10%;
 }
 
-.Rowlet h1{
-    color: #8B5E3C;
+.litten h1{
+    color: #795548;
     font-size: 54px;
 }
-.Rowlet p{
+.litten p{
 font-size: 24px;
 font-style: italic;
 color: #5DADE2;
 margin-top: 10px;
 margin-bottom: 35px;
 }
-
-/* Fim do Main*/
-
-/*inicio do sobre*/
-.Dartrix{
-    background-color:#8B5E3C ;
-    width: 100%;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.torracat{
+    display: inline-block;
+    background-color: #795548;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 14px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.torracat:hover {
+    background-color:#5dade2;
+    color:#ffffff;
 }
 
-.Dartrix div{
-    max-width: 50%;
-    padding-right: 40px;
+/* Agendamento */
 
+.Incineroar {
+    background-color: #E8D5BE;
+    padding: 60px 10%;
+    text-align: center;
 }
 
-.Dartrix img{
-    max-width: 750px;
-    border-radius: 9px;
-    box-shadow: 9px 9px 18px #FFF4E6;
-    
+.Incineroar h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
 }
 
-.Dartrix div h2{
-    font-size: 42px;
-    margin-bottom: 24px;
-    color: #5DADE2;
-}
-
-.Dartrix p{
-    color: #ffe4c1;
-    font-size: 20px;
-}
-/* Fim do sobre"
-
-/* Inicio do Rodape*/
-.Decidueye {
-    width: 100%;
-    background-color:#f3cf9f;
-    padding: 60px 0;
+form {
+    width: 400px;
+    margin: 30px auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color:#5DADE2;
 }
 
-.Decidueye a {
-    text-decoration: none;
-    color:#5DADE2;
+form label {
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-.Decidueye p {
-    margin-left: 12px;
-
+form input,form select {
+    padding: 10px;
+    border: 1px solid #A67C65;
+    border-radius: 5px;
 }
-/*Fim do Rodape*/
+
+button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #4F8191;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
