@@ -1,20 +1,26 @@
+```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Banho e Tosa - Patas & Pelos</title>
     <link rel="stylesheet" href="banho.css">
 </head>
+
 <body>
-    <!--Inicio Cabeçalho-->
+
+    <!-- Início do Cabeçalho -->
     <header>
+
         <div class="popplio">
-            <img src="Logo Patas & Pelos.png" alt=Logo patas e pelos>
+            <img src="Logo Patas & Pelos.png" alt="Logo Patas e Pelos">
         </div>
+
         <nav class="brionne">
             <ul class="primarina">
-        
+
                 <li><a href="index.html#home">Home</a></li>
                 <li><a href="index.html#sobre">Sobre Nós</a></li>
                 <li><a href="index.html#contato">Contato</a></li>
@@ -22,69 +28,169 @@
                 <li><a href="hotelzinho.html">Hotelzinho</a></li>
                 <li><a href="petshop.html">Petshop</a></li>
                 <li><a href="adocao.html">Adoção</a></li>
-        
+
             </ul>
         </nav>
-    </header>
-    <!-- Final do cabeçalho -->
 
-    <!--Inicio do Main-->
+    </header>
+    <!-- Fim do Cabeçalho -->
+
+
+    <!-- Início do Main -->
     <main>
+
+        <!-- Início da apresentação -->
         <section class="litten">
-     <div>
-                <h1>
-                     Banho e Tosa
-                    </h1>
+
+            <div>
+                <h1>Banho e Tosa</h1>
 
                 <p>
                     Serviços de higiene e cuidados para cães e gatos.
                 </p>
+
                 <br>
-                <a href="#agendamento" class="torracat"> Agende agora!</a>
+
+                <a href="#agendamento" class="torracat">
+                    Agende agora!
+                </a>
             </div>
+
         </section>
-               <section id="agendamento" class="Incineroar">
+        <!-- Fim da apresentação -->
 
-            <h2>Agende seu horário</h2>
 
-            <p>
-                Preencha os dados para solicitar um atendimento.
-            </p>
-            <!--Final do main-->
+        <!-- Início dos serviços -->
+        <section class="goomy">
+   
 
-            <!--Inicio dos serviços-->
-            <section class="pheromosa">
-                <
-            </section>
-            <!--Inicio do Agendamento-->
+            <article class="sliggoo">
+                <img src="shutterstock_1569883195.jpg" alt="banho">
+                <h2>Banho</h2>
+
+                <p>
+                    O serviço de banho oferece uma limpeza completa para o pet,
+                    utilizando produtos adequados ao tipo de pelo e às necessidades
+                    de cada animal. Passando por uma higienização em seguida de
+                    secagem e escovação para deixar os pelos limpos, macios e bem cuidados.
+                </p>
+
+                <button>Saiba mais</button>
+            </article>
+
+
+            <article class="goodra">
+                <img src="mulher-tosquia-um-cachorro-cachorro-sentado-no-sofa-raca-yorkshire-terrier_1157-46558.avif" alt="tosa">
+                <h2>Tosa</h2>
+
+                <p>
+                    A tosa é realizada de acordo com as características do pelo
+                    e as necessidades de cada pet. O serviço pode envolver a
+                    remoção ou redução do excesso de pelos, além do acabamento
+                    em regiões como rosto, patas e corpo.
+                </p>
+
+                <button>Saiba mais</button>
+            </article>
+
+
+            <article class="wimpod">
+                <img src="banho-e-tosa.webp" alt="banho e tosa">
+                <h2>Banho e Tosa</h2>
+
+                <p>
+                    O serviço de banho e tosa reúne os principais cuidados de
+                    higiene e estética em um único atendimento. O pet passa
+                    inicialmente pelo banho e pela higienização, seguido de
+                    secagem e escovação. Depois, é realizada a tosa escolhida
+                    de acordo com o tipo de pelo e a necessidade do animal.
+                </p>
+
+                <button>Saiba mais</button>
+            </article>
+
+
+            <article class="golisopod">
+                <img src="images.jpg" alt="aromaterapia">
+                <h2>Aromaterapia</h2>
+
+                <p>
+                    A aromaterapia pode ser oferecida como uma experiência
+                    complementar durante o atendimento, criando um ambiente
+                    mais tranquilo e agradável para o pet. Utiliza aromas
+                    suaves e apropriados para animais.
+                </p>
+
+                <button>Saiba mais</button>
+            </article>
+
+        </section>
+        <!-- Fim dos serviços -->
+
+
+        <!-- Início do Agendamento -->
+        <section id="agendamento" class="Incineroar">
+            <h2> Agende Aqui</h2>
+         <p>preencha o formulario abaixo</p>
             <form>
 
-                <label>Nome do tutor:</label>
-                <input type="text" placeholder="Digite seu nome">
+                <label for="nome-tutor">Nome do tutor:</label>
+                <input
+                    type="text"
+                    id="nome-tutor"
+                    name="nome-tutor"
+                    placeholder="Digite seu nome"
+                >
 
-                <label>Nome do pet:</label>
-                <input type="text" placeholder="Digite o nome do pet">
 
-                <label>Serviço:</label>
-                <select>
-                    <option>Banho</option>
-                    <option>Tosa</option>
-                    <option>Banho e Tosa</option>
-                    <option>Aromaterapia e cromoterapia</option>
+                <label for="nome-pet">Nome do pet:</label>
+                <input
+                    type="text"
+                    id="nome-pet"
+                    name="nome-pet"
+                    placeholder="Digite o nome do pet"
+                >
+
+
+                <label for="servico">Serviço:</label>
+
+                <select id="servico" name="servico">
+                    <option value="banho">Banho</option>
+                    <option value="tosa">Tosa</option>
+                    <option value="banho-e-tosa">Banho e Tosa</option>
+                    <option value="aromaterapia">Aromaterapia</option>
                 </select>
 
-                <label>Data:</label>
-                <input type="date">
 
-                <label>Horário:</label>
-                <input type="time">
+                <label for="data">Data:</label>
 
-                <button type="submit">Agendar</button>
+                <input
+                    type="date"
+                    id="data"
+                    name="data"
+                >
+
+
+                <label for="horario">Horário:</label>
+
+                <input
+                    type="time"
+                    id="horario"
+                    name="horario"
+                >
+
+
+                <button type="submit">
+                    Agendar
+                </button>
 
             </form>
 
         </section>
-     </main>
-     <!-- Final do agendamento-->
-        </section>
+        <!-- Fim do Agendamento -->
+
     </main>
+    <!-- Fim do Main -->
+</body>
+</html>
+
