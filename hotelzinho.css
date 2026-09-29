@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Inicio Header */
+
+header {
+    background-color: #FFF4E6;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 28px;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    
+}
+
+/* Logo */
+
+.popplio img {
+    width: 100px;
+    height: auto;
+    display: block;
+}
+
+/* Menu */
+
+.brionne {
+    display: flex;
+    align-items: center;
+}
+
+.primarina {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.primarina a {
+    text-decoration: none;
+    color: #5DADE2;
+    padding: 20px;
+}
+
+.primarina a:hover {
+    color: #5DADE2;
+}
+
+/* Fim do Header */
+
+.nihilego{
+     background-color: #E8D5BE;
+     height: calc(100vh - 80px);
+     background-size: cover;
+     background-position: center;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     background-image: url(istockphoto-1022012550-612x612.jpg);
+     background-repeat: no-repeat;
+        }
+.steene{
+    width: 650px;
+    padding: 24px;
+    border: 2px solid #795548;
+    border-radius: 12px;
+    background-color: #5DADE2;
+}
+.steene h1{
+   color: #4d2d21;
+   font-size: 51px;
+}
+.steene p{
+    color:#a88e6d;
+    font-size: 25px;
+}

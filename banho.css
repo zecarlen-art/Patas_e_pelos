@@ -67,11 +67,17 @@ header {
     width: 100%;
 background-color:#E8D5BE;
 height: calc(100vh - 80px);
+padding-left: 10%;
+padding-right: 10%;
+padding-top: 80px;
+padding-bottom: 80px;
 background-size: cover;
 background-position: center;
 display: flex;
 align-items: center;
 padding-left: 10%;
+ justify-content: space-between;
+ 
 }
 
 .litten h1{
@@ -84,6 +90,13 @@ font-style: italic;
 color: #5DADE2;
 margin-top: 10px;
 margin-bottom: 35px;
+}
+
+.litten img{
+    max-width: 900px;
+    border-radius: 75px;
+    box-shadow: 9px 9px 18px #795548;
+    
 }
 .torracat{
     display: inline-block;
