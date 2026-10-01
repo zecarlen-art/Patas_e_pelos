@@ -63,19 +63,24 @@ header {
 /* Fim do Header */
 
 .nihilego{
-     background-color: #E8D5BE;
-     height: calc(100vh - 80px);
-     background-size: cover;
-     background-position: center;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     text-align: center;
-     background-image: url(istockphoto-1022012550-612x612.jpg);
-     background-repeat: no-repeat;
+    width: 100%;
+    background-color:#E8D5BE;
+    height: calc(100vh - 80px);
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+     justify-content: space-between;
+     
         }
 .steene{
-    width: 650px;
+    width: 880px;
+    height: 350px;
     padding: 24px;
     border: 2px solid #795548;
     border-radius: 12px;
@@ -86,6 +91,68 @@ header {
    font-size: 51px;
 }
 .steene p{
-    color:#a88e6d;
+    color:#2e1c04;
     font-size: 25px;
+}
+.nihilego img{
+    max-width: 600px;
+    border-radius: 75px;
+    box-shadow: 9px 9px 18px #795548;
+}
+
+.cosmog{
+    background-color:#8B5E3C ;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cosmoem{
+    width: 500px;
+    min-height: 350px;
+    padding: 25px;
+    background-color: #fff4e6;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px #00000020;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column
+    
+}
+.cosmog h1{
+    color: #352019;
+    font-size: 45px;
+}
+.cosmog h1 span{
+    color: #5DADE2;
+}
+
+.cosmoem ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+.cosmoem ul li {
+    background-color: #FFF4E6;
+    color: #5D4037;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    font-size: 25px;
+}
+.cosmoem h1 {
+    color:#4A1515 ;
+    font-size: 45px;
+}
+.lunala{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
 }

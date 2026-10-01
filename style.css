@@ -67,7 +67,7 @@ header {
     width: 100%;
 background-color: #000;
 height: calc(100vh - 80px);
-background-image: url("convivencia-capa.jpg");
+background-image: url("img/convivencia-capa.jpg");
 background-repeat: no-repeat;
 background-size: cover;
 background-position: center;
@@ -132,21 +132,20 @@ margin-bottom: 35px;
 .Decidueye {
     width: 100%;
     background-color:#f3cf9f;
-    padding: 60px 0;
+    padding: 35px 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    color:#5DADE2;
+    color:#000000;
 }
 
 .Decidueye a {
     text-decoration: none;
-    color:#5DADE2;
+    color:#000000;
 }
 
 .Decidueye p {
-    margin-left: 12px;
+    margin-left: 10px;
 
 }
 /*Fim do Rodape*/
