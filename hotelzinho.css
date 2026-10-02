@@ -99,42 +99,44 @@ header {
     border-radius: 75px;
     box-shadow: 9px 9px 18px #795548;
 }
-
-.cosmog{
-    background-color:#8B5E3C ;
+.cosmog {
+    background-color: #8B5E3C;
     width: 100%;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding: 80px 10%;
+    box-sizing: border-box;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: stretch;
+    justify-content: center;
+    gap: 30px;
 }
-.cosmoem{
+.cosmoem {
     width: 500px;
     min-height: 350px;
     padding: 25px;
-    background-color: #fff4e6;
+    background-color: #FFF4E6;
     border-radius: 20px;
     box-shadow: 0 5px 15px #00000020;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column
-    
 }
-.cosmog h1{
-    color: #352019;
-    font-size: 45px;
+.cosmoem h1 {
+    color: #4A1515;
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
-.cosmog h1 span{
+.cosmoem h1 span {
     color: #5DADE2;
 }
-
+.cosmoem h2 {
+    color: #990d0d;
+    font-size: 35px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
 .cosmoem ul {
     list-style: none;
     padding: 0;
-    margin: 20px 0 0;
+    margin: 0;
 }
 .cosmoem ul li {
     background-color: #FFF4E6;
@@ -142,17 +144,68 @@ header {
     padding: 12px 15px;
     margin-bottom: 10px;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
-    font-size: 25px;
 }
-.cosmoem h1 {
-    color:#4A1515 ;
-    font-size: 45px;
+.lunala {
+    width: 100%;
 }
-.lunala{
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        flex-wrap: wrap;
+.necrozma{
+ background-color: #E8D5BE;
+ margin: 0;
+ height:calc(100vh - 80px);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ 
+}
+.solgaleo {
+    width: 700px;
+    min-height: 700px;
+    padding: 35px;
+    margin: 40px auto;
+    background-color: #8B5E3C;
+    border-radius: 25px;
+    box-shadow: 0 5px 20px #00000025;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 120px;
+}
+
+.solgaleo h1 {
+    color: #3b2418;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.solgaleo img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin-bottom: 25px;
+}
+
+.solgaleo h2 {
+    color: #3b2418;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.solgaleo table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.solgaleo th {
+    background-color: #5DADE2;
+    color: white;
+    padding: 15px;
+}
+
+.solgaleo td {
+    padding: 14px;
+    color: #352019;
+    border-bottom: 1px solid #e0cdb8;
 }

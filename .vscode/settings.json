@@ -1,3 +1,6 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "editor.inlineSuggest.showToolbar": "never",
+    "editor.snippetSuggestions": "none",
+    "editor.wordBasedSuggestions": "off"
 }
