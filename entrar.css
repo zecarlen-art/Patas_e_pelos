@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+     background-color: #5d4037;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+header {
+    background-color: #FFF4E6;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 28px;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    
+}
+.popplio img {
+    width: 100px;
+    height: auto;
+    display: block;
+}
+.brionne {
+    display: flex;
+    align-items: center;
+}
+.primarina {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.primarina a {
+    text-decoration: none;
+    color: #5DADE2;
+    padding: 20px;
+}
+.primarina a:hover {
+    color: #5DADE2;
+}
+.Marshadow{
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    padding: 40px;
+    margin-top: 165px;
+
+}
+.Darkrai{
+    width: 450px;
+    padding: 25px;
+    background-color: #fff4e6;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px #00000020;
+    box-sizing: border-box;
+}
+.Darkrai h2 {
+    text-align: center;
+    color: #352019;
+}
+.Darkrai p {
+    text-align: center;
+    color: #795548;
+}
+.Darkrai form {
+    display: flex;
+    flex-direction: column;
+}
+.Darkrai label {
+    margin-bottom: 5px;
+    color: #352019;
+    font-weight: bold;
+}
+.Darkrai input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #c9a27e;
+    border-radius: 8px;
+}
+
+.Darkrai button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #795548;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.Darkrai button:hover {
+    background-color: #5d4037;
+}
+.Darkrai a {
+    color: #795548;
+    font-weight: bold;
+    text-decoration: none;
+}
+#login {
+height: 350px;
+}

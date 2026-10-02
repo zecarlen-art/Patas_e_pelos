@@ -1,2 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="entrar.css">
+    <title>Patas & Pelos</title>
+</head>
+<body>
+     <header>
 
+        <div class="popplio">
+            <img src="img/Logo Patas & Pelos.png" alt="Logo Patas e Pelos">
+        </div>
+
+        <nav class="brionne">
+            <ul class="primarina">
+
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#sobre">Sobre Nós</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+                <li><a href="banho.html">Banho e Tosa</a></li>
+                <li><a href="hotelzinho.html">Hotelzinho</a></li>
+                <li><a href="petshop.html">Petshop</a></li>
+                <li><a href="entrar.html">Entre</a></li>
+
+            </ul>
+        </nav>
+
+    </header>
+    <div class="Marshadow">
+    <section id="login" class="Darkrai">
+    <h2>Acesse sua Conta</h2>
+    <p>Digite seu e-mail e senha para entrar</p>
+    <form>
+        <label for="email">E-mail:</label>
+        <input 
+            type="email" 
+            id="email" 
+            placeholder="Digite seu e-mail"
+            required
+        >
+        <label for="senha">Senha:</label>
+        <input 
+            type="password" 
+            id="senha" 
+            placeholder="Digite sua senha"
+            required
+        >
+        <button type="submit">Entrar</button>
+    </form>
+    <p>
+        Ainda não tem conta?
+        <a href="#cadastro">Cadastre-se aqui</a>
+    </p>
 </section>
+<section id="cadastro" class="Darkrai">
+    <h2>Crie sua Conta</h2>
+    <p>Preencha os dados abaixo para se cadastrar</p>
+    <br>
+    <form>
+        <label for="nome">Nome completo:</label>
+        <input 
+            type="text" 
+            id="nome" 
+            placeholder="Digite seu nome"
+            required
+        >
+        <label for="email-cadastro">E-mail:</label>
+        <input 
+            type="email" 
+            id="email-cadastro" 
+            placeholder="Digite seu e-mail"
+            required
+        >
+        <label for="telefone">Telefone:</label>
+        <input 
+            type="tel" 
+            id="telefone" 
+            placeholder="(00) 00000-0000"
+            required
+        >
+        <label for="pet">Nome do pet:</label>
+        <input 
+            type="text" 
+            id="pet" 
+            placeholder="Digite o nome do seu pet"
+        >
+        <label for="senha-cadastro">Senha:</label>
+        <input 
+            type="password" 
+            id="senha-cadastro" 
+            placeholder="Crie uma senha"
+            required
+        >
+        <label for="confirmar">Confirme sua senha:</label>
+        <input 
+            type="password" 
+            id="confirmar" 
+            placeholder="Digite a senha novamente"
+            required
+        >
+        <button type="submit">Cadastrar</button>
+    </form>
+    <p>
+        Já tem uma conta?
+        <a href="#login">Faça login</a>
+    </p>
+</section>
+</div>
+</body>
+</html>

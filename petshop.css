@@ -61,15 +61,10 @@ header {
 }
 
 
-/* SEÇÃO */
-
 .kyogre {
     width: 100%;
     padding: 140px 30px 40px;
 }
-
-
-/* TÍTULO */
 
 .kyogre h2 {
     text-align: center;
@@ -79,8 +74,6 @@ header {
 }
 
 
-/* CONTAINER DOS CARDS */
-
 .groudon {
     display: flex;
     justify-content: center;
@@ -89,8 +82,6 @@ header {
     width: 100%;
 }
 
-
-/* CARD */
 
 .rayquaza {
     width: 210px;
@@ -110,8 +101,6 @@ header {
 }
 
 
-/* IMAGEM */
-
 .rayquaza img {
     width: 100%;
     height: 160px;
@@ -121,9 +110,6 @@ header {
     margin-bottom: 12px;
 }
 
-
-/* NOME */
-
 .rayquaza h3 {
     font-size: 18px;
     color: #5a321f;
@@ -131,50 +117,45 @@ header {
     margin-bottom: 8px;
 }
 
-
-/* DESCRIÇÃO */
-
 .rayquaza p {
     font-size: 13px;
     color: #795548;
-
     line-height: 1.4;
-
     margin-bottom: auto;
 }
-
-
-/* PREÇO */
-
 .rayquaza span {
     display: block;
-
     font-size: 20px;
     font-weight: bold;
-
     color: #8b4513;
-
     margin-top: 10px;
 }
 
-
-/* EFEITO */
-
 .rayquaza:hover {
     transform: translateY(-5px);
-
     box-shadow: 0 8px 18px #00000025;
 }
 
-
-/* LINHA */
-
 hr {
     border: none;
-
     height: 2px;
-
     background-color: #8b5e3c;
-
     margin: 20px 40px;
+}
+
+.rayquaza button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 10px;
+    background-color: #8b5e3c;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.rayquaza button:hover {
+    background-color: #5a321f;
 }
