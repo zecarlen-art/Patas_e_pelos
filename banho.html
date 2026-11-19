@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patas & Pelos</title>
     <link rel="stylesheet" href="banho.css">
+    <link rel="stylesheet" href="carrinho.css">
 </head>
 
 <body>
@@ -191,6 +192,34 @@
 
     </main>
     <!-- Fim do Main -->
+     <!-- BOTÃO FLUTUANTE E SIDEBAR DO CARRINHO -->
+    <button id="cart-btn" class="cart-btn" onclick="toggleCart()">
+        🛒 Carrinho (<span id="cart-count">0</span>)
+    </button>
+
+    <aside id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Seu Carrinho</h2>
+            <button class="close-btn" onclick="toggleCart()">&times;</button>
+        </div>
+
+        <div id="cart-items" class="cart-items">
+            <!-- Os itens adicionados aparecerão aqui via JavaScript -->
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">R$ 0,00</span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">Finalizar Compra</button>
+        </div>
+    </aside>
+
+    <div id="cart-overlay" class="cart-overlay" onclick="toggleCart()"></div>
+
+    <!-- SCRIPT DO CARRINHO -->
+    <script src="carrinho.js"></script>
 </body>
 </html>
 
