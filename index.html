@@ -1,87 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patas & Pelos</title>
+    <title>Patas & Pelos - Petshop, Banho & Tosa e Hotelzinho</title>
+    <!-- Importando fontes modernas do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Conectando ao arquivo CSS externo -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!--Inicio Cabeçalho-->
+
+    <!-- MENU SUPERIOR -->
     <header>
-        <div class="popplio">
-            <img src="img/Logo Patas & Pelos.png" alt=Logo patas e pelos>
-        </div>
-        <nav class="brionne">
-            <ul class="primarina">
-        
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#contato">Contato</a></li>
+        <a href="#" class="logo">
+            <div class="popplio">
+                <img src="img/Logo_Patas___Pelos-removebg-preview.png" alt="Logo Patas e Pelos">
+            </div>
+            Patas & Pelos
+        </a>
+
+        <nav>
+            <ul>
                 <li><a href="banho.html">Banho e Tosa</a></li>
                 <li><a href="hotelzinho.html">Hotelzinho</a></li>
                 <li><a href="petshop.html">Petshop</a></li>
                 <li><a href="entrar.html">Entre</a></li>
-        
             </ul>
         </nav>
+
+        <div class="header-actions">
+            <a href="#carrinho" class="cart-btn">🛒 Carrinho (0)</a>
+            <a href="#login" class="btn-login">Entre</a>
+        </div>
     </header>
-    <!-- Final do cabeçalho -->
 
-
-     <!--Início Main-->
-     <main>
-        <section id="home" class="Rowlet">
-            <div>
-                <h1>
-                Olá,
-                <br> 
-                Bem vindo a Patas & Pelos
-                </h1>
-
-                <p>
-                    Um mundo pensado no ritmo deles.
-                </p>
+    <!-- BANNER PRINCIPAL DIVIDIDO -->
+    <section class="hero">
+        <div class="hero-text">
+            <span class="hero-tag">Um mundo pensado no ritmo deles</span>
+            <h1>A melhor escolha para o bem-estar do seu pet!</h1>
+            <p>Encontre rações, brinquedos e acessórios no nosso Petshop, ou agende um dia especial no nosso Banho & Tosa e Hotelzinho.</p>
+            <div class="hero-buttons">
+                <a href="#servicos" class="btn-primary">Agendar Serviço</a>
+                <a href="#petshop" class="btn-secondary">Ver Produtos</a>
             </div>
-        </section>
-     </main>
-     <!-- Final do main -->
+        </div>
+        <div class="hero-image">
+            <!-- Substitua o src abaixo pelo caminho da sua foto do cachorro e gato -->
+            <img src="img/istockphoto-1171731668-612x612.jpg" alt="Cachorro e gato juntos">
+        </div>
+    </section>
 
-     <!-- Início do sobre -->
-<section id="sobre" class="Dartrix">
-    <div>
-        <h2>Sobre nós</h2>
+    <!-- OS 3 PILARES (DESTAQUE DE SERVIÇOS E LOJA) -->
+    <section id="servicos" class="pillars">
+        <h2 class="section-title">Tudo o que seu amigo precisa</h2>
+        <p class="section-subtitle">Cuidado completo em um só lugar, com carinho e segurança.</p>
 
-        <p>
-            A Patas & Pelos nasceu para ser parceira de quem ama e cuida de seus parceiros de quatro patas. Sabendo como funciona a rotina dos tutores nossa empresa foi fundada para ser um ponto de apoio e de confiança onde você pode encontrar tudo que seu pet  precisa unindo praticidade carinho e responsabilidade em um so 
-            local
-        </p>
-<br><br>
-        <p>
-           Seja para grantir a ração um novo brinquedo favorito agendar o banho e tosa ou achar um local  hotelzinho seguro onde você pode viajar com tranquilidade sabendo que seu pet estará sendo bem cuidado e em segurança 
-        </p>
- <br><br>
-         <p>
-            Além  do bem estar do seu pet a Patas & Pelos oferece informações e faz a ponte ligando os animais abandonados a novos tutores prontos para cuida-los e ama-los da forma que cada pet merece 
-         </p>
-          </div>
-          <img src="img/istockphoto-1171731668-612x612.jpg" alt=" imagem de um cachorro e um gato deitados juntos">
-          </section>
-          <!-- Fim do sobre -->
+        <div class="pillars-grid">
+            <!-- Card 1 -->
+            <div class="pillar-card">
+                <div class="pillar-icon">🛁</div>
+                <h3>Banho & Tosa</h3>
+                <p>Estética e higiene com produtos hipoalergênicos e profissionais treinados para evitar estresse.</p>
+                <a href="banho.html" class="btn-card">Agendar Horário</a>
+            </div>
 
-          <!--Inico do Rodapé-->
-          <footer>
-            <section id="contato" class="Decidueye">
-                <h2>Entre em contato através:</h2>
-                <br><br>
-                <h3><a href="#"> Número:31 984975612</a></h3>
-                <br><br>
-                <h3><a href="#">falecom@patasepelos.com.br</a></h3>
-                <br><br>
-                <p> Horário de atendimento:</p>
-            <br>
-                <p>Segunda a Sexta, das 8h às 18h</p>
-            </section>
-        </footer>
+            <!-- Card 2 -->
+            <div class="pillar-card">
+                <div class="pillar-icon">🏡</div>
+                <h3>Hotelzinho Amigo</h3>
+                <p>Hospedagem segura, recreação supervisionada e envio diário de fotos para você viajar tranquilo.</p>
+                <a href="hotelzinho.html" class="btn-card">Conhecer Espaço</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- VITRINE DO PETSHOP -->
+    <section id="petshop" class="shop-section">
+        <div class="shop-header">
+            <h2 class="section-title">Os Favoritos do Petshop</h2>
+            <p class="section-subtitle">Confira alguns dos produtos mais pedidos pelos nossos clientes</p>
+        </div>
+
+        <!-- Filtro de Categorias -->
+        <div class="categories-bar">
+            <span class="cat-pill active">Todos</span>
+            <span class="cat-pill">Rações</span>
+            <span class="cat-pill">Brinquedos</span>
+            <span class="cat-pill">Caminhas</span>
+            <span class="cat-pill">Higiene</span>
+        </div>
+
+        <!-- Grade de Produtos -->
+        <div class="products-grid">
+            <!-- Produto 1 -->
+            <div class="product-card">
+                <div>
+                    <div class="product-img">🛍️</div>
+                    <span class="product-cat">Rações</span>
+                    <h4>Ração Premium Cães Adultos 15kg</h4>
+                </div>
+                <div>
+                    <div class="product-price">R$ 189,90</div>
+                    <button class="btn-buy">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+
+            <!-- Produto 2 -->
+            <div class="product-card">
+                <div>
+                    <div class="product-img">🧸</div>
+                    <span class="product-cat">Brinquedos</span>
+                    <h4>Mordedor Interativo Resistente</h4>
+                </div>
+                <div>
+                    <div class="product-price">R$ 34,90</div>
+                    <button class="btn-buy">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+
+            <!-- Produto 3 -->
+            <div class="product-card">
+                <div>
+                    <div class="product-img">🛏️</div>
+                    <span class="product-cat">Conforto</span>
+                    <h4>Caminha Nuvem Macia Lavável</h4>
+                </div>
+                <div>
+                    <div class="product-price">R$ 119,00</div>
+                    <button class="btn-buy">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+
+            <!-- Produto 4 -->
+            <div class="product-card">
+                <div>
+                    <div class="product-img">🧶</div>
+                    <span class="product-cat">Brinquedos</span>
+                    <h4>Arranhador e Bolinha para Gatos</h4>
+                </div>
+                <div>
+                    <div class="product-price">R$ 49,90</div>
+                    <button class="btn-buy">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p><strong>Patas & Pelos</strong> — Petshop, Banho & Tosa e Hotelzinho</p>
+        <p class="footer-copy">© 2026 Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>
