@@ -13,9 +13,9 @@
 
     <!-- MENU SUPERIOR -->
     <header>
-        <a href="#" class="logo">
+        <a href="index.html" class="logo">
             <div class="popplio">
-                <img src="img/Logo_Patas___Pelos-removebg-preview.png" alt="Logo Patas e Pelos">
+                <img src="img/Logo_Patas___Pelos-removebg-preview.png" alt="Logo Patas e Pelos" style="height: 45px; width: auto;">
             </div>
             Patas & Pelos
         </a>
@@ -25,13 +25,12 @@
                 <li><a href="banho.html">Banho e Tosa</a></li>
                 <li><a href="hotelzinho.html">Hotelzinho</a></li>
                 <li><a href="petshop.html">Petshop</a></li>
-                <li><a href="entrar.html">Entre</a></li>
             </ul>
         </nav>
 
         <div class="header-actions">
             <a href="#carrinho" class="cart-btn">🛒 Carrinho (0)</a>
-            <a href="#login" class="btn-login">Entre</a>
+            <a href="entrar.html" class="btn-login">Entre</a>
         </div>
     </header>
 
@@ -47,12 +46,11 @@
             </div>
         </div>
         <div class="hero-image">
-            <!-- Substitua o src abaixo pelo caminho da sua foto do cachorro e gato -->
             <img src="img/istockphoto-1171731668-612x612.jpg" alt="Cachorro e gato juntos">
         </div>
     </section>
 
-    <!-- OS 3 PILARES (DESTAQUE DE SERVIÇOS E LOJA) -->
+    <!-- DESTAQUE DE SERVIÇOS -->
     <section id="servicos" class="pillars">
         <h2 class="section-title">Tudo o que seu amigo precisa</h2>
         <p class="section-subtitle">Cuidado completo em um só lugar, com carinho e segurança.</p>
@@ -85,66 +83,252 @@
 
         <!-- Filtro de Categorias -->
         <div class="categories-bar">
-            <span class="cat-pill active">Todos</span>
-            <span class="cat-pill">Rações</span>
-            <span class="cat-pill">Brinquedos</span>
-            <span class="cat-pill">Caminhas</span>
-            <span class="cat-pill">Higiene</span>
+            <span class="cat-pill filter-btn active" data-filter="todos" aria-pressed="true">Todos</span>
+            <span class="cat-pill filter-btn" data-filter="racoes" aria-pressed="false">Rações</span>
+            <span class="cat-pill filter-btn" data-filter="brinquedos" aria-pressed="false">Brinquedos</span>
+            <span class="cat-pill filter-btn" data-filter="caminhas" aria-pressed="false">Caminhas</span>
+            <span class="cat-pill filter-btn" data-filter="higiene" aria-pressed="false">Higiene</span>
         </div>
 
-        <!-- Grade de Produtos -->
-        <div class="products-grid">
-            <!-- Produto 1 -->
-            <div class="product-card">
-                <div>
-                    <div class="product-img">🛍️</div>
-                    <span class="product-cat">Rações</span>
-                    <h4>Ração Premium Cães Adultos 15kg</h4>
+        <!-- Aviso de Nenhum Produto Encontrado -->
+        <div id="menuVazio" hidden style="text-align: center; padding: 30px; color: #666;">
+            Nenhum produto encontrado nesta categoria.
+        </div>
+
+        <!-- Container do Carrossel -->
+        <div class="carousel-wrapper">
+            <button class="carousel-btn prev-btn" id="btnPrev" aria-label="Produtos anteriores">&#10094;</button>
+
+            <!-- Grade de Produtos em Linha (4 por categoria) -->
+            <div class="products-carousel" id="productsCarousel">
+                
+                <!-- RAÇÕES (4) -->
+                 <!--produto 1-->
+                <div class="product-card menu-item" data-cat="racoes">
+                    <div>
+                        <div class="product-img">🛍️</div>
+                        <span class="product-cat">Rações</span>
+                        <h4>Ração Premium Cães Adultos 15kg</h4>
+                    </div>
+                    <div>
+                        <div class="product-price">R$ 189,90</div>
+                        <button class="btn-buy">Adicionar ao Carrinho</button>
+                    </div>
                 </div>
-                <div>
-                    <div class="product-price">R$ 189,90</div>
-                    <button class="btn-buy">Adicionar ao Carrinho</button>
+                <!--produto 2-->
+                <div class="product-card menu-item" data-cat="racoes">
+                    <div>
+                        <div class="product-img">🐟</div>
+                        <span class="product-cat">Rações</span>
+                        <h4>Ração Salmão Gatos Castrados 10kg</h4>
+                    </div>
+                    <div>
+                        <div class="product-price">R$ 154,90</div>
+                        <button class="btn-buy">Adicionar ao Carrinho</button>
+                    </div>
                 </div>
+                <!--produto 3-->
+                <div class="product-card menu-item" data-cat="racoes">
+                    <div>
+                        <div class="product-img">🍖</div>
+                        <span class="product-cat">Rações</span>
+                        <h4>Ração Raças Pequenas 3kg</h4>
+                    </div>
+                    <div>
+                        <div class="product-price">R$ 68,90</div>
+                        <button class="btn-buy">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <!--produto 4-->
+                <div class="product-card menu-item" data-cat="racoes">
+                    <div>
+                        <div class="product-img">🥩</div>
+                        <span class="product-cat">Rações</span>
+                        <h4>Petisco Natural Carne 250g</h4>
+                    </div>
+                    <div>
+                        <div class="product-price">R$ 24,90</div>
+                        <button class="btn-buy">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+
+                <!-- BRINQUEDOS (4) -->
+                 <!--produto 1-->
+                <div class="product-card menu-item" data-cat="brinquedos">
+                    <div>
+                        <div class="product-img">
+                            <img src="img/1626455878614_mini-removebg-preview.png"Ração Premium Cães Adultos 15kg>
+                        </div>
+                        <span class="product-cat">Brinquedos</span>
+                        <h4>Mordedor Interativo Resistente</h4>
+                    </div>
+                    <div>
+                        <div class="product-price">R$ 34,90</div>
+                        <button class="btn-buy">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <!--produto 2-->
+                <div class="product-card menu-item" data-cat="brinquedos">
+                    <div>
+                        <div class="product-img">
+                            <img src="img/20037080000928_1757014819978-removebg-preview.png"Ração Premium Cães Adultos 15kg>
+                        </div>
+                        <span class="product-cat">Brinquedos</span>
+                        <h4>Brinquedo Caça Petisco Interativo</h4>
+                    </div>
+                    <div>
+                        <div class="product-price">R$ 49,90</div>
+                        <button class="btn-buy">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <!--produto 3-->
+                <div class="product-card menu-item" data-cat="brinquedos">
+                    <div>
+                        <div class="product-img">
+                            <img src="img/1619803113763-removebg-preview.png"Ração Premium Cães Adultos 15kg>
+                        </div>
+                        <span class="product-cat">Brinquedos</span>
+                        <h4>Kit 3 Bolinhas de Tênis para Cães</h4>
+                    </div>
+                    <div>
+                        <div class="product-price">R$ 19,90</div>
+                        <button class="btn-buy">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <!--produto 4-->
+                <div class="product-card menu-item" data-cat="brinquedos">
+                    <div>
+                        <div class="product-img">
+                            <img src="img/20037080000932_1750100533442-removebg-preview.png"Ração Premium Cães Adultos 15kg>
+                        </div>
+                        <span class="product-cat">Brinquedos</span>
+                        <h4>Brinquedo Pelúcia Ratinho com Catnip</h4>
+                    </div>
+                    <div>
+                        <div class="product-price">R$ 15,90</div>
+                        <button class="btn-buy">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+
+                <!-- CAMINHAS (4) -->
+                 <!--produto 1-->
+                <div class="product-card menu-item" data-cat="caminhas">
+                    <div>
+                        <div class="product-img">
+                            <img src="img/51dUa-JCmEL._AC_SX679_-removebg-preview.png"Ração Premium Cães Adultos 15kg>
+                        </div>
+                        <span class="product-cat">Caminhas</span>
+                        <h4>Caminha Nuvem Macia Lavável</h4>
+                    </div>
+                    <div>
+                        <div class="product-price">R$ 119,00</div>
+                        <button class="btn-buy">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <!--produto 2-->
+                <div class="product-card menu-item" data-cat="caminhas">
+                    <div>
+                        <div class="product-img">
+                            <img src="img/1635945592320-removebg-preview.png"Ração Premium Cães Adultos 15kg>
+                        </div>
+                        <span class="product-cat">Caminhas</span>
+                        <h4>Colchão Ortopédico Tamanho G</h4>
+                    </div>
+                    <div>
+                        <div class="product-price">R$ 189,00</div>
+                        <button class="btn-buy">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <!--produto 3-->
+                <div class="product-card menu-item" data-cat="caminhas">
+                    <div>
+                        <div class="product-img">
+                            <img src="img/1638978363458-removebg-preview.png"Ração Premium Cães Adultos 15kg>
+                        </div>
+                        <span class="product-cat">Caminhas</span>
+                        <h4>Toca Iglu Confort para Gatos</h4>
+                    </div>
+                    <div>
+                        <div class="product-price">R$ 139,90</div>
+                        <button class="btn-buy">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <!--produto 4-->
+                <div class="product-card menu-item" data-cat="caminhas">
+                    <div>
+                        <div class="product-img">
+                            <img src="img/1721678387792-removebg-preview.png"Ração Premium Cães Adultos 15kg>
+                        </div>
+                        <span class="product-cat">Caminhas</span>
+                        <h4>Cama Spike Velvet Redonda Terra para Cães e Gatos</h4>
+                    </div>
+                    <div>
+                        <div class="product-price">R$ 95,00</div>
+                        <button class="btn-buy">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+
+                <!-- HIGIENE (4) -->
+                 <!--produto 1-->
+                <div class="product-card menu-item" data-cat="higiene">
+                    <div>
+                        <div class="product-img">
+                            <img src="img/1721941284000-removebg-preview.png"Ração Premium Cães Adultos 15kg">
+                        </div>
+                        <span class="product-cat">Higiene</span>
+                        <h4>Shampoo Neutro Hipoalergênico 500ml</h4>
+                    </div>
+                    <div>
+                        <div class="product-price">R$ 29,90</div>
+                        <button class="btn-buy">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <!--produto 2-->
+                <div class="product-card menu-item" data-cat="higiene">
+                    <div>
+                        <div class="product-img">
+                            <img src="img/1720725415371-removebg-preview.png" alt="Ração Premium Cães Adultos 15kg">
+                        </div>
+                        <span class="product-cat">Higiene</span>
+                        <h4>Tapete Higiênico Super Absorvente 30un</h4>
+                    </div>
+                    <div>
+                        <div class="product-price">R$ 54,90</div>
+                        <button class="btn-buy">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <!--produto 3-->
+                <div class="product-card menu-item" data-cat="higiene">
+                    <div>
+                        <div class="product-img">
+                            <img src="img/1725999451511-removebg-preview.png" alt="Ração Premium Cães Adultos 15kg">
+                        </div>
+                        <span class="product-cat">Higiene</span>
+                        <h4>Escova Remove Pelos Mortos</h4>
+                    </div>
+                    <div>
+                        <div class="product-price">R$ 39,90</div>
+                        <button class="btn-buy">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <!--produto 4-->
+                <div class="product-card menu-item" data-cat="higiene">
+                    <div>
+                        <div class="product-img">
+                            <img src="img/1589291282818-removebg-preview.png" alt="Ração Premium Cães Adultos 15kg">
+                        </div>
+                        <span class="product-cat">Higiene</span>
+                        <h4>Kit Dental Pet (Pasta + Escova)</h4>
+                    </div>
+                    <div>
+                        <div class="product-price">R$ 25,90</div>
+                        <button class="btn-buy">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+
             </div>
 
-            <!-- Produto 2 -->
-            <div class="product-card">
-                <div>
-                    <div class="product-img">🧸</div>
-                    <span class="product-cat">Brinquedos</span>
-                    <h4>Mordedor Interativo Resistente</h4>
-                </div>
-                <div>
-                    <div class="product-price">R$ 34,90</div>
-                    <button class="btn-buy">Adicionar ao Carrinho</button>
-                </div>
-            </div>
-
-            <!-- Produto 3 -->
-            <div class="product-card">
-                <div>
-                    <div class="product-img">🛏️</div>
-                    <span class="product-cat">Conforto</span>
-                    <h4>Caminha Nuvem Macia Lavável</h4>
-                </div>
-                <div>
-                    <div class="product-price">R$ 119,00</div>
-                    <button class="btn-buy">Adicionar ao Carrinho</button>
-                </div>
-            </div>
-
-            <!-- Produto 4 -->
-            <div class="product-card">
-                <div>
-                    <div class="product-img">🧶</div>
-                    <span class="product-cat">Brinquedos</span>
-                    <h4>Arranhador e Bolinha para Gatos</h4>
-                </div>
-                <div>
-                    <div class="product-price">R$ 49,90</div>
-                    <button class="btn-buy">Adicionar ao Carrinho</button>
-                </div>
-            </div>
+            <button class="carousel-btn next-btn" id="btnNext" aria-label="Próximos produtos">&#10095;</button>
         </div>
     </section>
 
@@ -153,6 +337,9 @@
         <p><strong>Patas & Pelos</strong> — Petshop, Banho & Tosa e Hotelzinho</p>
         <p class="footer-copy">© 2026 Todos os direitos reservados.</p>
     </footer>
+
+    <!-- SCRIPT EXTERNO -->
+    <script src="home.js"></script>
 
 </body>
 </html>

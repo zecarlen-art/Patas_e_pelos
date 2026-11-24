@@ -108,3 +108,16 @@ header {
 #login {
 height: 350px;
 }
+/* ================= RESPONSIVIDADE ================= */
+@media (max-width: 850px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-buttons {
+        justify-content: center;
+    }
+    nav ul {
+        display: none;
+    }
+}

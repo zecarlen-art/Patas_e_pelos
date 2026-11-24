@@ -168,3 +168,16 @@
 .cart-overlay.active {
     display: block;
 }
+/* ================= RESPONSIVIDADE ================= */
+@media (max-width: 850px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-buttons {
+        justify-content: center;
+    }
+    nav ul {
+        display: none;
+    }
+}
