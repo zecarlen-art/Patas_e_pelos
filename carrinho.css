@@ -1,183 +1,204 @@
-/* Botão Flutuante do Carrinho */
+/* ================= CARRINHO GLOBAL (CSS) ================= */
 .cart-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #795548;
-    color: #fff;
-    border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 50px;
+    background-color: var(--bg-white, #FFFFFF);
+    border: 1px solid var(--border-light, #EAE0D5);
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-weight: 700;
+    color: var(--brown-dark, #5C4033);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    transition: background 0.3s ease;
 }
 
-.cart-btn:hover {
-    background-color: #5DADE2;
-}
-
-/* Sidebar do Carrinho */
 .cart-sidebar {
     position: fixed;
     top: 0;
     right: -400px;
-    width: 350px;
-    height: 100%;
-    background-color: #fff;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1002;
+    width: 370px;
+    max-width: 90vw;
+    height: 100vh;
+    background-color: #FFFFFF;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
     display: flex;
     flex-direction: column;
     transition: right 0.3s ease;
 }
 
-.cart-sidebar.active {
+.cart-sidebar.open {
     right: 0;
 }
 
+.cart-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 999;
+    display: none;
+}
+
+.cart-overlay.open {
+    display: block;
+}
+
 .cart-header {
+    background-color: #FDF8F2;
+    padding: 20px;
+    border-bottom: 1px solid #EAE0D5;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #ddd;
 }
 
 .cart-header h2 {
-    margin: 0;
-    font-size: 20px;
+    font-size: 1.25rem;
+    color: #5C4033;
+    font-weight: 800;
 }
 
 .close-btn {
     background: none;
     border: none;
-    font-size: 24px;
+    font-size: 1.8rem;
+    color: #5C4033;
     cursor: pointer;
+    line-height: 1;
 }
 
-/* Lista de Itens */
 .cart-items {
     flex: 1;
-    overflow-y: auto;
     padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.empty-cart-msg {
+    text-align: center;
+    color: #888;
+    margin-top: 40px;
+    font-size: 0.95rem;
 }
 
 .cart-item {
     display: flex;
-    gap: 12px;
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #eee;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FAFAFA;
+    border: 1px solid #EAEAEA;
+    padding: 12px;
+    border-radius: 12px;
 }
 
-.cart-item img {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 6px;
+.cart-item-info h4 {
+    font-size: 0.95rem;
+    color: #333;
+    margin-bottom: 4px;
 }
 
-.cart-item-details {
-    flex: 1;
-}
-
-.cart-item-details h4 {
-    margin: 0 0 5px 0;
-    font-size: 14px;
-}
-
-.cart-item-price {
-    font-weight: bold;
-    color: #5DADE2;
-    font-size: 14px;
+.cart-item-info span {
+    font-size: 0.88rem;
+    font-weight: 800;
+    color: #5C4033;
 }
 
 .cart-item-controls {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-top: 8px;
 }
 
-.cart-item-controls button {
-    background-color: #eee;
-    border: none;
-    padding: 2px 8px;
-    cursor: pointer;
-    border-radius: 4px;
+.qty-btn {
+    width: 26px;
+    height: 26px;
+    border-radius: 6px;
+    border: 1px solid #DDD;
+    background-color: white;
     font-weight: bold;
+    cursor: pointer;
+    color: #5C4033;
 }
 
-.cart-item-remove {
+.qty-btn:hover {
+    background-color: #FDF8F2;
+}
+
+.remove-btn {
     background: none;
     border: none;
-    color: #e74c3c;
+    color: #E53935;
+    font-size: 1rem;
     cursor: pointer;
-    font-size: 12px;
-    margin-left: auto;
+    margin-left: 4px;
 }
 
-/* Rodapé e Total */
 .cart-footer {
+    background-color: #FDF8F2;
     padding: 20px;
-    background-color: #f8f9fa;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #EAE0D5;
+}
+
+.payment-box {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.payment-box label {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: #5C4033;
+}
+
+.payment-box select {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #D5C7B8;
+    background-color: white;
+    font-weight: 600;
+    color: #333;
+    outline: none;
 }
 
 .cart-total {
     display: flex;
     justify-content: space-between;
-    font-size: 18px;
-    font-weight: bold;
+    align-items: center;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #5C4033;
     margin-bottom: 15px;
 }
 
 .checkout-btn {
     width: 100%;
-    padding: 12px;
-    background-color: #5DADE2;
-    color: #fff;
+    padding: 14px;
+    background-color: #4A90E2;
+    color: white;
     border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: bold;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 800;
     cursor: pointer;
+    transition: background 0.2s;
 }
 
 .checkout-btn:hover {
-    background-color: #5DADE2;
+    background-color: #357ABD;
 }
 
-/* Overlay Escuro de Fundo */
-.cart-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    display: none;
-    z-index: 1001;
-}
-
-.cart-overlay.active {
-    display: block;
-}
-/* ================= RESPONSIVIDADE ================= */
-@media (max-width: 850px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-    .hero-buttons {
-        justify-content: center;
-    }
-    nav ul {
-        display: none;
-    }
+.pedido-status {
+    margin-top: 12px;
+    padding: 12px;
+    background-color: #E8F5E9;
+    border: 1px solid #A5D6A7;
+    color: #2E7D32;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    line-height: 1.4;
 }

@@ -1,225 +1,186 @@
-
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patas & Pelos</title>
+    <title>Patas & Pelos - Banho e Tosa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="banho.css">
-    <link rel="stylesheet" href="carrinho.css">
 </head>
 
 <body>
 
-    <!-- Início do Cabeçalho -->
+    <!-- MENU SUPERIOR -->
     <header>
+        <a href="index.html" class="logo">
+            <div class="popplio">
+                <img src="img/Logo_Patas___Pelos-removebg-preview.png" alt="Logo Patas e Pelos" style="height: 45px; width: auto;">
+            </div>
+            Patas & Pelos
+        </a>
 
-        <div class="popplio">
-            <img src="img/Logo Patas & Pelos.png" alt="Logo Patas e Pelos">
-        </div>
-
-        <nav class="brionne">
-            <ul class="primarina">
-
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#sobre">Sobre Nós</a></li>
-                <li><a href="index.html#contato">Contato</a></li>
-                <li><a href="banho.html">Banho e Tosa</a></li>
+        <nav>
+            <ul>
+                <li><a href="banho.html" class="active-link">Banho e Tosa</a></li>
                 <li><a href="hotelzinho.html">Hotelzinho</a></li>
                 <li><a href="petshop.html">Petshop</a></li>
-                <li><a href="entrar.html">Entre</a></li>
-
             </ul>
         </nav>
 
+        <div class="header-actions">
+            <a href="entrar.html" class="btn-login">Entre</a>
+        </div>
     </header>
-    <!-- Fim do Cabeçalho -->
 
-
-    <!-- Início do Main -->
     <main>
-
-        <!-- Início da apresentação -->
-        <section class="litten">
-
-            <div>
-                <h1>Banho e Tosa</h1>
-
-                <p>
-                    Serviços de higiene e cuidados para cães e gatos.
-                </p>
-
-                <br>
-
-                <a href="#agendamento" class="torracat">
-                    Agende agora!
-                </a>
+        <!-- BANNER -->
+        <section class="hero-banho">
+            <div class="hero-text">
+                <span class="hero-tag">Estética & Bem-estar</span>
+                <h1>Banho e Tosa com carinho e segurança</h1>
+                <p>Serviços de higiene e cuidados para cães e gatos. Escolha o serviço ideal e agende o horário do seu pet abaixo.</p>
+                <div class="hero-buttons">
+                    <a href="#servicos-lista" class="btn-secondary">Ver Serviços</a>
+                    <a href="#agendamento" class="btn-primary">Agende Agora!</a>
+                </div>
             </div>
-            <img src="img/istockphoto-1845512061-612x612.jpg" alt="cães e gatos correndo juntos">
+            <div class="hero-image">
+                <img src="img/istockphoto-1845512061-612x612.jpg" alt="Cães e gatos correndo juntos">
+            </div>
         </section>
-        <!-- Fim da apresentação -->
 
+        <!-- LISTA DE SERVIÇOS -->
+        <section id="servicos-lista" class="services-section">
+            <h2 class="section-title">Nossos Serviços</h2>
+            <p class="section-subtitle">Conheça nossos pacotes de cuidados para o seu melhor amigo</p>
 
-        <!-- Início dos serviços -->
-        <section class="goomy">
-   
+            <div class="services-grid">
+                <!-- Card 1 -->
+                <article class="service-card">
+                    <div class="service-img-box">
+                        <img src="img/shutterstock_1569883195.jpg" alt="Banho">
+                    </div>
+                    <div class="service-content">
+                        <h3>Banho</h3>
+                        <p>O serviço de banho oferece uma limpeza completa para o pet, utilizando produtos adequados ao tipo de pelo e às necessidades de cada animal.</p>
+                        <button type="button" class="btn-select-service" data-servico="banho">Agendar este</button>
+                    </div>
+                </article>
 
-            <article class="sliggoo">
-                <img src="img/shutterstock_1569883195.jpg" alt="banho">
-                <h2>Banho</h2>
+                <!-- Card 2 -->
+                <article class="service-card">
+                    <div class="service-img-box">
+                        <img src="img/mulher-tosquia-um-cachorro-cachorro-sentado-no-sofa-raca-yorkshire-terrier_1157-46558.avif" alt="Tosa">
+                    </div>
+                    <div class="service-content">
+                        <h3>Tosa</h3>
+                        <p>A tosa é realizada de acordo com as características do pelo e as necessidades de cada pet, envolvendo remoção de excesso e acabamento.</p>
+                        <button type="button" class="btn-select-service" data-servico="tosa">Agendar este</button>
+                    </div>
+                </article>
 
-                <p>
-                    O serviço de banho oferece uma limpeza completa para o pet,
-                    utilizando produtos adequados ao tipo de pelo e às necessidades
-                    de cada animal. Passando por uma higienização em seguida de
-                    secagem e escovação para deixar os pelos limpos, macios e bem cuidados.
-                </p>
+                <!-- Card 3 -->
+                <article class="service-card">
+                    <div class="service-img-box">
+                        <img src="img/banho-e-tosa.webp" alt="Banho e Tosa">
+                    </div>
+                    <div class="service-content">
+                        <h3>Banho e Tosa</h3>
+                        <p>Reúne os principais cuidados de higiene e estética em um único atendimento, com banho, higienização, secagem e a tosa escolhida.</p>
+                        <button type="button" class="btn-select-service" data-servico="banho-e-tosa">Agendar este</button>
+                    </div>
+                </article>
 
-                <button>Saiba mais</button>
-            </article>
-
-
-            <article class="goodra">
-                <img src="img/mulher-tosquia-um-cachorro-cachorro-sentado-no-sofa-raca-yorkshire-terrier_1157-46558.avif" alt="tosa">
-                <h2>Tosa</h2>
-
-                <p>
-                    A tosa é realizada de acordo com as características do pelo
-                    e as necessidades de cada pet. O serviço pode envolver a
-                    remoção ou redução do excesso de pelos, além do acabamento
-                    em regiões como rosto, patas e corpo.
-                </p>
-
-                <button>Saiba mais</button>
-            </article>
-
-
-            <article class="wimpod">
-                <img src="img/banho-e-tosa.webp" alt="banho e tosa">
-                <h2>Banho e Tosa</h2>
-
-                <p>
-                    O serviço de banho e tosa reúne os principais cuidados de
-                    higiene e estética em um único atendimento. O pet passa
-                    inicialmente pelo banho e pela higienização, seguido de
-                    secagem e escovação. Depois, é realizada a tosa escolhida
-                    de acordo com o tipo de pelo e a necessidade do animal.
-                </p>
-
-                <button>Saiba mais</button>
-            </article>
-
-
-            <article class="golisopod">
-                <img src="img/images.jpg" alt="aromaterapia">
-                <h2>Aromaterapia</h2>
-
-                <p>
-                    A aromaterapia pode ser oferecida como uma experiência
-                    complementar durante o atendimento, criando um ambiente
-                    mais tranquilo e agradável para o pet. Utiliza aromas
-                    suaves e apropriados para animais.
-                </p>
-
-                <button>Saiba mais</button>
-            </article>
-
+                <!-- Card 4 -->
+                <article class="service-card">
+                    <div class="service-img-box">
+                        <img src="img/images.jpg" alt="Aromaterapia">
+                    </div>
+                    <div class="service-content">
+                        <h3>Aromaterapia</h3>
+                        <p>Experiência complementar durante o atendimento, criando um ambiente mais tranquilo e agradável com aromas suaves apropriados para animais.</p>
+                        <button type="button" class="btn-select-service" data-servico="aromaterapia">Agendar este</button>
+                    </div>
+                </article>
+            </div>
         </section>
-        <!-- Fim dos serviços -->
 
+        <!-- FORMULÁRIO DE AGENDAMENTO COM CLASSIFICAÇÃO DE PORTE E PREÇOS -->
+        <section id="agendamento" class="booking-section">
+            <div class="booking-container">
+                <h2 class="section-title">Agende Aqui</h2>
+                <p class="section-subtitle">Preencha o formulário abaixo, escolha o porte do pet e defina o horário</p>
 
-        <!-- Início do Agendamento -->
-        <section id="agendamento" class="Incineroar">
-            <h2> Agende Aqui</h2>
-         <p>preencha o formulario abaixo</p>
-            <form>
+                <form id="formAgendamento" class="booking-form">
+                    
+                    <div class="form-group">
+                        <label for="nome-tutor">Nome do tutor:</label>
+                        <input type="text" id="nome-tutor" name="nome-tutor" placeholder="Digite seu nome" required>
+                    </div>
 
-                <label for="nome-tutor">Nome do tutor:</label>
-                <input
-                    type="text"
-                    id="nome-tutor"
-                    name="nome-tutor"
-                    placeholder="Digite seu nome"
-                >
+                    <div class="form-group">
+                        <label for="nome-pet">Nome do pet:</label>
+                        <input type="text" id="nome-pet" name="nome-pet" placeholder="Digite o nome do pet" required>
+                    </div>
 
+                    <div class="form-group">
+                        <label for="servico">Serviço:</label>
+                        <select id="servico" name="servico" required>
+                            <option value="banho">Banho</option>
+                            <option value="tosa">Tosa</option>
+                            <option value="banho-e-tosa">Banho e Tosa</option>
+                            <option value="aromaterapia">Aromaterapia</option>
+                        </select>
+                    </div>
 
-                <label for="nome-pet">Nome do pet:</label>
-                <input
-                    type="text"
-                    id="nome-pet"
-                    name="nome-pet"
-                    placeholder="Digite o nome do pet"
-                >
+                    <!-- CAMPO DE PORTE PARA DEFINIR O PREÇO -->
+                    <div class="form-group">
+                        <label for="porte">Porte do pet (Classificação para preço):</label>
+                        <select id="porte" name="porte" required>
+                            <option value="pequeno">Porte Pequeno (Até 10kg)</option>
+                            <option value="medio">Porte Médio (10kg a 25kg)</option>
+                            <option value="grande">Porte Grande (Acima de 25kg)</option>
+                        </select>
+                    </div>
 
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="data">Data desejada:</label>
+                            <input type="date" id="data" name="data" required>
+                        </div>
 
-                <label for="servico">Serviço:</label>
+                        <div class="form-group">
+                            <label for="horario">Horário disponível:</label>
+                            <input type="time" id="horario" name="horario" required>
+                        </div>
+                    </div>
 
-                <select id="servico" name="servico">
-                    <option value="banho">Banho</option>
-                    <option value="tosa">Tosa</option>
-                    <option value="banho-e-tosa">Banho e Tosa</option>
-                    <option value="aromaterapia">Aromaterapia</option>
-                </select>
+                    <!-- CAIXA DE EXIBIÇÃO DO VALOR ESTIMADO -->
+                    <div id="precoEstimadoBox" class="price-estimate-box">
+                        Valor estimado do serviço: <strong id="valorServico">R$ 45,00</strong>
+                    </div>
 
+                    <button type="submit" class="btn-submit">
+                        Agendar Horário
+                    </button>
 
-                <label for="data">Data:</label>
+                </form>
 
-                <input
-                    type="date"
-                    id="data"
-                    name="data"
-                >
-
-
-                <label for="horario">Horário:</label>
-
-                <input
-                    type="time"
-                    id="horario"
-                    name="horario"
-                >
-
-
-                <button type="submit">
-                    Agendar
-                </button>
-
-            </form>
-
+                <div id="mensagemConfirmacao" class="confirmation-box" hidden></div>
+            </div>
         </section>
-        <!-- Fim do Agendamento -->
 
     </main>
-    <!-- Fim do Main -->
-     <!-- BOTÃO FLUTUANTE E SIDEBAR DO CARRINHO -->
-    <button id="cart-btn" class="cart-btn" onclick="toggleCart()">
-        🛒 Carrinho (<span id="cart-count">0</span>)
-    </button>
 
-    <aside id="cart-sidebar" class="cart-sidebar">
-        <div class="cart-header">
-            <h2>Seu Carrinho</h2>
-            <button class="close-btn" onclick="toggleCart()">&times;</button>
-        </div>
+    <!-- RODAPÉ -->
+    <footer>
+        <p><strong>Patas & Pelos</strong> — Petshop, Banho & Tosa e Hotelzinho</p>
+        <p class="footer-copy">© 2026 Todos os direitos reservados.</p>
+    </footer>
 
-        <div id="cart-items" class="cart-items">
-            <!-- Os itens adicionados aparecerão aqui via JavaScript -->
-        </div>
-
-        <div class="cart-footer">
-            <div class="cart-total">
-                <span>Total:</span>
-                <span id="cart-total-price">R$ 0,00</span>
-            </div>
-            <button class="checkout-btn" onclick="checkout()">Finalizar Compra</button>
-        </div>
-    </aside>
-
-    <div id="cart-overlay" class="cart-overlay" onclick="toggleCart()"></div>
-
-    <!-- SCRIPT DO CARRINHO -->
-    <script src="carrinho.js"></script>
+    <!-- SCRIPT DA PÁGINA -->
+    <script src="banho.js"></script>
 </body>
-</html>
 
+</html>

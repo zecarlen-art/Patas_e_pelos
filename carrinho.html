@@ -3,40 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="carrinho.css">
     <title>Document</title>
-    <link rel="stylesheet" href="carrinho.css"
 </head>
 <body>
-    <!-- BOTÃO FLUTUANTE DO CARRINHO -->
+    <!-- 1. BOTÃO FLUTUANTE QUE ABRE O CARRINHO -->
     <button id="cart-btn" class="cart-btn" onclick="toggleCart()">
         🛒 Carrinho (<span id="cart-count">0</span>)
     </button>
 
-    <!-- SIDEBAR DO CARRINHO -->
+    <!-- 2. GAVETA LATERAL DO CARRINHO (COMPARTILHADA) -->
     <aside id="cart-sidebar" class="cart-sidebar">
         <div class="cart-header">
-            <h2>Seu Carrinho</h2>
+            <h2>🛒 Seu Carrinho</h2>
             <button class="close-btn" onclick="toggleCart()">&times;</button>
         </div>
 
         <div id="cart-items" class="cart-items">
-            <!-- Os itens adicionados aparecerão aqui via JavaScript -->
+            <!-- Os itens de qualquer página aparecem aqui automaticamente -->
         </div>
 
         <div class="cart-footer">
+            <div class="payment-box">
+                <label for="forma-pagamento">Forma de Pagamento:</label>
+                <select id="forma-pagamento">
+                    <option value="PIX (5% de desconto na loja)">PIX</option>
+                    <option value="Cartão de Crédito">Cartão de Crédito</option>
+                    <option value="Cartão de Débito">Cartão de Débito</option>
+                    <option value="Dinheiro no local">Dinheiro no local</option>
+                </select>
+            </div>
+
             <div class="cart-total">
-                <span>Total:</span>
+                <span>Total Acumulado:</span>
                 <span id="cart-total-price">R$ 0,00</span>
             </div>
-            <button class="checkout-btn" onclick="checkout()">Finalizar Compra</button>
+
+            <button class="checkout-btn" onclick="confirmarPedido()">Confirmar Pedido</button>
+            <div id="pedido-status" class="pedido-status" hidden></div>
         </div>
     </aside>
 
-    <!-- SOBREPOSIÇÃO PARA FECHAR O CARRINHO -->
     <div id="cart-overlay" class="cart-overlay" onclick="toggleCart()"></div>
 
-    <!-- SCRIPT DO CARRINHO -->
+    <!-- 3. SCRIPT GLOBAL DO CARRINHO -->
     <script src="carrinho.js"></script>
-</body>
 </body>
 </html>
