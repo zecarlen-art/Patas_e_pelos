@@ -1,146 +1,240 @@
+/* Variáveis de Cores Alinhadas ao Site */
+:root {
+    --bg-cream: #FDF8F2;
+    --bg-sand: #F4E9DC;
+    --bg-white: #FFFFFF;
+    --brown-dark: #5C4033;
+    --brown-medium: #8B5A2B;
+    --blue-accent: #4A90E2;
+    --blue-hover: #357ABD;
+    --text-dark: #333333;
+    --text-muted: #666666;
+    --border-light: #EAE0D5;
+}
+
 * {
     margin: 0;
     padding: 0;
-    outline: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f3dfc5;
+    font-family: 'Nunito', sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: var(--bg-white);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
 
-/* HEADER */
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
+/* ================= HEADER / MENU ================= */
 header {
-    background-color: #FFF4E6;
-    height: 100px;
-    width: 100%;
+    background-color: var(--bg-cream);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-light);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
+.logo {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-
-    padding: 0 28px;
-
-    position: fixed;
-    top: 0;
-    z-index: 9;
+    gap: 10px;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--brown-dark);
 }
 
 .popplio img {
-    width: 100px;
+    width: 65px;
     height: auto;
     display: block;
 }
 
-.brionne {
-    display: flex;
-    align-items: center;
-}
-
-.primarina {
-    display: flex;
-    align-items: center;
+nav ul {
     list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
 }
 
-.primarina a {
-    text-decoration: none;
-    color: #5DADE2;
-    padding: 20px;
+nav ul li a {
+    font-weight: 700;
+    color: var(--brown-dark);
+    font-size: 0.95rem;
+    transition: color 0.2s;
 }
 
-.primarina a:hover {
-    color: #5DADE2;
+nav ul li a:hover,
+nav ul li a.active-link {
+    color: var(--blue-accent);
 }
 
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 
+.btn-login {
+    background-color: var(--brown-dark);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.btn-login:hover {
+    background-color: var(--brown-medium);
+}
+
+/* ================= CONTEÚDO PRINCIPAL ================= */
+.petshop-main {
+    padding-top: 130px;
+    padding-bottom: 60px;
+}
+
+.page-main-title {
+    text-align: center;
+    font-size: 38px;
+    color: var(--brown-dark);
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.page-main-subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+/* ================= SEÇÕES E CARROSSEL ================= */
 .kyogre {
     width: 100%;
-    padding: 140px 30px 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.section-header-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 0 10px;
 }
 
 .kyogre h2 {
-    text-align: center;
-    font-size: 34px;
-    color: #5a321f;
-    margin-bottom: 35px;
+    font-size: 28px;
+    color: var(--brown-dark);
+    font-weight: 800;
 }
 
+/* Botões de navegação do carrossel */
+.carousel-nav-btns {
+    display: flex;
+    gap: 10px;
+}
 
+.carousel-nav-btn {
+    background-color: var(--brown-dark);
+    color: white;
+    border: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.carousel-nav-btn:hover {
+    background-color: var(--brown-medium);
+}
+
+/* Container de rolagem horizontal (Carrossel) */
 .groudon {
     display: flex;
-    justify-content: center;
-    align-items: stretch;
     gap: 20px;
-    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 5px 25px 5px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--brown-medium) transparent;
 }
 
+.groudon::-webkit-scrollbar {
+    height: 8px;
+}
 
+.groudon::-webkit-scrollbar-thumb {
+    background-color: var(--brown-medium);
+    border-radius: 10px;
+}
+
+/* Cards de Produtos */
 .rayquaza {
-    width: 210px;
-    height: 350px;
-    flex-shrink: 0;
-
-    background-color: #FFF4E6;
-
-    padding: 15px;
-
+    width: 230px;
+    min-width: 230px;
+    height: 380px;
+    background-color: var(--bg-cream);
+    padding: 18px;
     border-radius: 18px;
-
     display: flex;
     flex-direction: column;
-
-    box-shadow: 0 5px 15px #00000020;
-}
-
-
-.rayquaza img {
-    width: 100%;
-    height: 160px;
-
-    object-fit: contain;
-
-    margin-bottom: 12px;
-}
-
-.rayquaza h3 {
-    font-size: 18px;
-    color: #5a321f;
-
-    margin-bottom: 8px;
-}
-
-.rayquaza p {
-    font-size: 13px;
-    color: #795548;
-    line-height: 1.4;
-    margin-bottom: auto;
-}
-.rayquaza span {
-    display: block;
-    font-size: 20px;
-    font-weight: bold;
-    color: #8b4513;
-    margin-top: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .rayquaza:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 18px #00000025;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
 }
 
-hr {
-    border: none;
-    height: 2px;
-    background-color: #8b5e3c;
-    margin: 20px 40px;
+.rayquaza img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.rayquaza h3 {
+    font-size: 17px;
+    color: var(--brown-dark);
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.rayquaza p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.4;
+    margin-bottom: auto;
+}
+
+.rayquaza span {
+    display: block;
+    font-size: 19px;
+    font-weight: 800;
+    color: var(--brown-medium);
+    margin-top: 10px;
 }
 
 .rayquaza button {
@@ -149,13 +243,29 @@ hr {
     margin-top: 12px;
     border: none;
     border-radius: 10px;
-    background-color: #8b5e3c;
+    background-color: var(--brown-medium);
     color: #fff;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: bold;
     cursor: pointer;
+    transition: background 0.2s;
 }
 
 .rayquaza button:hover {
-    background-color: #5a321f;
+    background-color: var(--brown-dark);
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: var(--brown-medium);
+    margin: 10px 50px;
+    opacity: 0.4;
+}
+
+/* ================= RESPONSIVIDADE ================= */
+@media (max-width: 850px) {
+    .primarina {
+        display: none;
+    }
 }

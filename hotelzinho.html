@@ -1,137 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patas & Pelos</title>
+    <title>Patas & Pelos - Hotelzinho</title>
+    <!-- Fonte padrão Nunito -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="hotelzinho.css">
     <link rel="stylesheet" href="carrinho.css">
 </head>
+
 <body>
-    
-    <!-- Início do Cabeçalho -->
+
+    <!-- MENU SUPERIOR PADRONIZADO -->
     <header>
+        <a href="index.html" class="logo">
+            <div class="popplio">
+                <img src="img/Logo_Patas___Pelos-removebg-preview.png" alt="Logo Patas e Pelos" style="height: 45px; width: auto;">
+            </div>
+            Patas & Pelos
+        </a>
 
-        <div class="popplio">
-            <img src="img/Logo Patas & Pelos.png" alt="Logo Patas e Pelos">
-        </div>
-
-        <nav class="brionne">
-            <ul class="primarina">
-
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#sobre">Sobre Nós</a></li>
-                <li><a href="index.html#contato">Contato</a></li>
+        <nav>
+            <ul>
                 <li><a href="banho.html">Banho e Tosa</a></li>
-                <li><a href="hotelzinho.html">Hotelzinho</a></li>
+                <li><a href="hotelzinho.html" class="active-link">Hotelzinho</a></li>
                 <li><a href="petshop.html">Petshop</a></li>
-                <li><a href="entrar.html">Entre</a></li>
-
             </ul>
         </nav>
 
+        <div class="header-actions">
+            <!-- Botão flutuante do carrinho unificado -->
+            <button id="cart-btn" class="cart-btn" onclick="toggleCart()">
+                🛒 Carrinho (<span id="cart-count">0</span>)
+            </button>
+            <a href="entrar.html" class="btn-login">Entre</a>
+        </div>
     </header>
-    <!-- Fim do Cabeçalho -->
 
-    <section class="nihilego">
-        <article class="steene">
-        <h1> Hotelzinho</h1>
-        <p>Seu pet também merece um lugar especial para ficar quando você precisar viajar!
-            <br>
-            No Hotelzinho Patas & Pelos, seu animal encontra um espaço preparado para receber cada hóspede com conforto, segurança e os cuidados necessários durante toda a estadia.
-             Aqui, acompanhamos a rotina dos pets e oferecemos atenção para que eles se sintam bem enquanto estiverem longe de casa.
-         </p>
-        </article>
-        <img src="img/Como-montar-um-hotel-para-cachorro.png.webp" alt="cachorro mordendo um banbolé">
-    </section>
+    <main>
+        <!-- SEÇÃO APRESENTAÇÃO (HERO) -->
+        <section class="nihilego">
+            <article class="steene">
+                <h1>Hotelzinho</h1>
+                <p>
+                    Seu pet também merece um lugar especial para ficar quando você precisar viajar! 
+                    No Hotelzinho Patas & Pelos, seu animal encontra um espaço preparado para receber cada hóspede com conforto, segurança e os cuidados necessários durante toda a estadia.
+                </p>
+            </article>
+            <div class="hero-img-box">
+                <img src="img/Como-montar-um-hotel-para-cachorro.png.webp" alt="Cachorro aproveitando o hotel">
+            </div>
+        </section>
 
-    <section class="cosmog">
-         <article class="cosmoem">
-         <div class="lunala">
-         <h1>O que faz nosso <span>hotelzinho</span> ser o paraíso dos pets</h1>
-            <ul>
-                <li>Ambiente climatizado</li>
-                <li>Área de recreação</li>
-                <li>Monitoramento constante</li>
-                <li>Alimentação de qualidade</li>
-                <li>Atividades personalizadas</li>
-                <li>Registro diário da rotina e comportamento do pet</li>
-            </ul>
+        <!-- SEÇÃO DE BENEFÍCIOS E REGRAS -->
+        <section class="cosmog">
+            <article class="cosmoem">
+                <div class="lunala">
+                    <h1>O que faz nosso <span>hotelzinho</span> ser o paraíso dos pets</h1>
+                    <ul>
+                        <li>Ambiente climatizado e seguro</li>
+                        <li>Área de recreação ampla e monitorada</li>
+                        <li>Monitoramento veterinário constante</li>
+                        <li>Alimentação de qualidade supervisionada</li>
+                        <li>Atividades e brincadeiras personalizadas</li>
+                        <li>Registro diário da rotina e fotos do pet</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="cosmoem">
+                <div class="lunala">
+                    <h2>Nossas Regras</h2>
+                    <ul>
+                        <li>Vacinas em dia: V8/V10, Raiva e Gripe Canina</li>
+                        <li>Aceitamos cães castrados e não castrados</li>
+                        <li>Controle de antipulgas e vermífugo atualizados</li>
+                        <li>Ficha de cadastro e contrato obrigatórios</li>
+                        <li>Informar previamente alergias ou cuidados especiais</li>
+                        <li>Manter dados e contatos de emergência atualizados</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+
+        <!-- SEÇÃO DE PREÇOS POR ESTADIA (COM BOTÕES PARA O CARRINHO) -->
+        <section class="necrozma">
+            <article class="solgaleo">
+                <h1>Preços por Estadia</h1>
+                <img src="img/istockphoto-1250394360-612x612.jpg" alt="Cachorro e gato brincando na grama">
+                <h2>Escolha o plano ideal e adicione ao carrinho</h2>
+                
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th>Estadia</th>
+                            <th>Preço</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1 Diária</td>
+                            <td class="price-val">R$ 80,00</td>
+                            <td><button type="button" class="btn-add-mini" onclick="adicionarAoCarrinho('Hotelzinho - 1 Diária', 80.00)">Adicionar</button></td>
+                        </tr>
+                        <tr>
+                            <td>3 Diárias</td>
+                            <td class="price-val">R$ 225,00</td>
+                            <td><button type="button" class="btn-add-mini" onclick="adicionarAoCarrinho('Hotelzinho - 3 Diárias', 225.00)">Adicionar</button></td>
+                        </tr>
+                        <tr>
+                            <td>7 Diárias (Pacote Semanal)</td>
+                            <td class="price-val">R$ 530,00</td>
+                            <td><button type="button" class="btn-add-mini" onclick="adicionarAoCarrinho('Hotelzinho - 7 Diárias', 530.00)">Adicionar</button></td>
+                        </tr>
+                        <tr>
+                            <td>15 Diárias (Pacote Quinzenal)</td>
+                            <td class="price-val">R$ 1.000,00</td>
+                            <td><button type="button" class="btn-add-mini" onclick="adicionarAoCarrinho('Hotelzinho - 15 Diárias', 1000.00)">Adicionar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+    </main>
+
+    <!-- SIDEBAR DO CARRINHO GLOBAL (COMPARTILHADO) -->
+    <aside id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>🛒 Seu Carrinho</h2>
+            <button class="close-btn" onclick="toggleCart()">&times;</button>
         </div>
-    </article>
-    <article class="cosmoem">
-     <div class="lunala">
-    <h2>Nossas regras</h2>
-            <ul>
-                <li>Vacinas em dia: V8, Raiva e Gripe Canina</li>
-                <li>Aceitamos cães castrados e não castrados</li>
-                <li>Antipulgas e vermífugo atualizados</li>
-                <li>Contrato obrigatório</li>
-                <li>Informar previamente qualquer alergia ou necessidade especial</li>
-                <li>Manter os dados e contatos do responsável atualizados</li>
-                <li>Avisar com antecedência sobre cancelamentos</li>
-            </ul>
+
+        <div id="cart-items" class="cart-items">
+            <!-- Itens inseridos dinamicamente -->
         </div>
-    </article>
-</section>
-<section class="necrozma">
-    <article class="solgaleo">
-    <h1>Preços por estadia</h1>
-    <img src="img/istockphoto-1250394360-612x612.jpg" alt="cachorro e gato brincando na grama">
-    <h2>confira os preços abaixo</h2>
-    <table>
-        <tr>
-            <th>Estadia</th>
-            <th>Preço</th>
-        </tr>
-        <tr>
-            <td>1 diária</td>
-            <td>R$ 80,00</td>
-        </tr>
-        <tr>
-            <td>3 diárias</td>
-            <td>R$ 225,00</td>
-        </tr>
-        <tr>
-            <td>7 diárias</td>
-            <td>R$ 530,00</td>
-        </tr>
-        <tr>
-            <td>15 diárias</td>
-            <td>R$ 1000,00</td>
-        </tr>
-    </table>
-</article>
-</section>
-</section>
 
-<!-- BOTÃO FLUTUANTE E SIDEBAR DO CARRINHO -->
-<button id="cart-btn" class="cart-btn" onclick="toggleCart()">
-    🛒 Carrinho (<span id="cart-count">0</span>)
-</button>
+        <div class="cart-footer">
+            <div class="payment-box">
+                <label for="forma-pagamento">Forma de Pagamento:</label>
+                <select id="forma-pagamento">
+                    <option value="PIX (5% de desconto)">PIX</option>
+                    <option value="Cartão de Crédito">Cartão de Crédito</option>
+                    <option value="Cartão de Débito">Cartão de Débito</option>
+                    <option value="Dinheiro no local">Dinheiro no local</option>
+                </select>
+            </div>
 
-<aside id="cart-sidebar" class="cart-sidebar">
-    <div class="cart-header">
-        <h2>Seu Carrinho</h2>
-        <button class="close-btn" onclick="toggleCart()">&times;</button>
-    </div>
+            <div class="cart-total">
+                <span>Total Acumulado:</span>
+                <span id="cart-total-price">R$ 0,00</span>
+            </div>
 
-    <div id="cart-items" class="cart-items">
-        <!-- Os itens adicionados aparecerão aqui via JavaScript -->
-    </div>
-
-    <div class="cart-footer">
-        <div class="cart-total">
-            <span>Total:</span>
-            <span id="cart-total-price">R$ 0,00</span>
+            <button class="checkout-btn" onclick="confirmarPedido()">Confirmar Pedido</button>
+            <div id="pedido-status" class="pedido-status" hidden></div>
         </div>
-        <button class="checkout-btn" onclick="checkout()">Finalizar Compra</button>
-    </div>
-</aside>
+    </aside>
 
-<div id="cart-overlay" class="cart-overlay" onclick="toggleCart()"></div>
+    <div id="cart-overlay" class="cart-overlay" onclick="toggleCart()"></div>
 
-<!-- SCRIPT DO CARRINHO -->
-<script src="carrinho.js"></script>
+    <!-- RODAPÉ -->
+    <footer>
+        <p><strong>Patas & Pelos</strong> — Petshop, Banho & Tosa e Hotelzinho</p>
+        <p class="footer-copy">© 2026 Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="carrinho.js"></script>
+    <script src="hotelzinho.js"></script>
 </body>
+
 </html>

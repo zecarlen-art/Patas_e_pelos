@@ -1,245 +1,324 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Patas & Pelos - Petshop</title>
+    <!-- Fonte padrão Nunito -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="petshop.css">
     <link rel="stylesheet" href="carrinho.css">
-
-    <title>Patas & Pelos</title>
 </head>
 
 <body>
 
-    <!-- HEADER -->
-
-    <header>
-
+   <!-- MENU SUPERIOR PADRONIZADO -->
+   <header>
+    <a href="index.html" class="logo">
         <div class="popplio">
-            <img src="img/Logo Patas & Pelos.png" alt="Logo Patas e Pelos">
+            <img src="img/Logo_Patas___Pelos-removebg-preview.png" alt="Logo Patas e Pelos" style="height: 45px; width: auto;">
         </div>
+        Patas & Pelos
+    </a>
 
-        <nav class="brionne">
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="banho.html">Banho e Tosa</a></li>
+            <li><a href="hotelzinho.html" class="active-link">Hotelzinho</a></li>
+            <li><a href="petshop.html">Petshop</a></li>
+        </ul>
+    </nav>
 
-            <ul class="primarina">
+    <div class="header-actions">
+        <!-- Botão flutuante do carrinho unificado -->
+        <button id="cart-btn" class="cart-btn" onclick="toggleCart()">
+            🛒 Carrinho (<span id="cart-count">0</span>)
+        </button>
+        <a href="entrar.html" class="btn-login">Entre</a>
+    </div>
+</header>
 
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#sobre">Sobre Nós</a></li>
-                <li><a href="index.html#contato">Contato</a></li>
-                <li><a href="banho.html">Banho e Tosa</a></li>
-                <li><a href="hotelzinho.html">Hotelzinho</a></li>
-                <li><a href="petshop.html">Petshop</a></li>
-                <li><a href="entrar.html">Entre</a></li>
+    <main class="petshop-main">
+        
+        <h1 class="page-main-title">Loja Patas & Pelos</h1>
+        <p class="page-main-subtitle">Tudo o que o seu melhor amigo precisa em um só lugar</p>
 
-            </ul>
+        <!-- SEÇÃO 1: RAÇÃO PARA CACHORROS (COM CARROSSEL) -->
+        <section class="kyogre">
+            <div class="section-header-box">
+                <h2>Ração para Cachorros</h2>
+                <div class="carousel-nav-btns">
+                    <button class="carousel-nav-btn" onclick="rolarCarrossel('carousel- caes', -300)">&#10094;</button>
+                    <button class="carousel-nav-btn" onclick="rolarCarrossel('carousel-caes', 300)">&#10095;</button>
+                </div>
+            </div>
 
-        </nav>
+            <div id="carousel-caes" class="groudon">
+                <article class="rayquaza">
+                    <img src="img/shopping.webp" alt="ração para cachorro">
+                    <h3>Ração Premium</h3>
+                    <p>Ração para cães adultos sabor original</p>
+                    <span>R$ 500,90</span>
+                    <button onclick="adicionarAoCarrinho('Ração Premium Cães', 500.90)">Comprar</button>
+                </article>
+                <article class="rayquaza">
+                    <img src="img/10001305000322_1731597454809.jpg" alt="ração para cachorro">
+                    <h3>Ração de Frango</h3>
+                    <p>Alimento completo e balanceado para cães</p>
+                    <span>R$ 351,90</span>
+                    <button onclick="adicionarAoCarrinho('Ração Frango Cães', 351.90)">Comprar</button>
+                </article>
+                <article class="rayquaza">
+                    <img src="img/D_Q_NP_819034-MLA117486278593_092026-F.webp" alt="ração para cachorro">
+                    <h3>Ração de Carne</h3>
+                    <p>Ração sabor carne rica em proteínas</p>
+                    <span>R$ 312,90</span>
+                    <button onclick="adicionarAoCarrinho('Ração Carne Cães', 312.90)">Comprar</button>
+                </article>
+                <article class="rayquaza">
+                    <img src="img/700770_01.webp" alt="ração para cachorro">
+                    <h3>Ração Filhotes</h3>
+                    <p>Ideal para o crescimento saudável de cães filhotes</p>
+                    <span>R$ 354,90</span>
+                    <button onclick="adicionarAoCarrinho('Ração Filhotes Cães', 354.90)">Comprar</button>
+                </article>
+                <article class="rayquaza">
+                    <img src="img/348300-1.webp" alt="ração para cachorro">
+                    <h3>Ração Especial</h3>
+                    <p>Alimentação super premium para reabastecer vitaminas</p>
+                    <span>R$ 457,90</span>
+                    <button onclick="adicionarAoCarrinho('Ração Especial Cães', 457.90)">Comprar</button>
+                </article>
+                <!-- Produto Extra Adicionado -->
+                <article class="rayquaza">
+                    <img src="img/shopping.webp" alt="Ração Senior">
+                    <h3>Ração Sênior</h3>
+                    <p>Cuidado especializado para cães idosos</p>
+                    <span>R$ 420,00</span>
+                    <button onclick="adicionarAoCarrinho('Ração Sênior Cães', 420.00)">Comprar</button>
+                </article>
+            </div>
+        </section>
 
-    </header>
+        <hr>
 
+        <!-- SEÇÃO 2: RAÇÃO PARA GATOS (COM CARROSSEL) -->
+        <section class="kyogre">
+            <div class="section-header-box">
+                <h2>Ração para Gatos</h2>
+                <div class="carousel-nav-btns">
+                    <button class="carousel-nav-btn" onclick="rolarCarrossel('carousel-gatos', -300)">&#10094;</button>
+                    <button class="carousel-nav-btn" onclick="rolarCarrossel('carousel-gatos', 300)">&#10095;</button>
+                </div>
+            </div>
 
-    <!-- RAÇÃO PARA CACHORROS -->
+            <div id="carousel-gatos" class="groudon">
+                <article class="rayquaza">
+                    <img src="img/3109559.jpg" alt="ração para gato">
+                    <h3>Ração Premium</h3>
+                    <p>Ração balanceada para gatos adultos</p>
+                    <span>R$ 500,90</span>
+                    <button onclick="adicionarAoCarrinho('Ração Premium Gatos', 500.90)">Comprar</button>
+                </article>
+                <article class="rayquaza">
+                    <img src="img/1726842486329.jpg" alt="ração para gato">
+                    <h3>Mix de Carnes</h3>
+                    <p>Fórmula ideal para gatos castrados</p>
+                    <span>R$ 351,90</span>
+                    <button onclick="adicionarAoCarrinho('Ração Gatos Castrados', 351.90)">Comprar</button>
+                </article>
+                <article class="rayquaza">
+                    <img src="img/download.jpg" alt="ração para gato">
+                    <h3>Ração de Peixe</h3>
+                    <p>Ração sabor salmão e peixe branco</p>
+                    <span>R$ 312,90</span>
+                    <button onclick="adicionarAoCarrinho('Ração Peixe Gatos', 312.90)">Comprar</button>
+                </article>
+                <article class="rayquaza">
+                    <img src="img/179_Origens_select_gatos_filhotes_frango_frente.webp" alt="ração para gato">
+                    <h3>Gatos Filhotes</h3>
+                    <p>Nutrição completa para gatinhos</p>
+                    <span>R$ 354,90</span>
+                    <button onclick="adicionarAoCarrinho('Ração Filhotes Gatos', 354.90)">Comprar</button>
+                </article>
+                <article class="rayquaza">
+                    <img src="img/D_Q_NP_653171-MLA109271721264_042026-F.webp" alt="ração para gato">
+                    <h3>Ração Especial</h3>
+                    <p>Vitaminas e proteção urinária reforçada</p>
+                    <span>R$ 457,90</span>
+                    <button onclick="adicionarAoCarrinho('Ração Especial Gatos', 457.90)">Comprar</button>
+                </article>
+                <!-- Produto Extra Adicionado -->
+                <article class="rayquaza">
+                    <img src="img/3109559.jpg" alt="Ração Hairball">
+                    <h3>Anti Hairball</h3>
+                    <p>Especial para controle de bolas de pelo</p>
+                    <span>R$ 389,90</span>
+                    <button onclick="adicionarAoCarrinho('Ração Anti Hairball Gatos', 389.90)">Comprar</button>
+                </article>
+            </div>
+        </section>
 
-    <section class="kyogre">
+        <hr>
 
-        <h2>Ração para cachorros</h2>
+        <!-- SEÇÃO 3: BRINQUEDOS PARA PETS (COM CARROSSEL) -->
+        <section class="kyogre">
+            <div class="section-header-box">
+                <h2>Brinquedos para Pets</h2>
+                <div class="carousel-nav-btns">
+                    <button class="carousel-nav-btn" onclick="rolarCarrossel('carousel-brinquedos', -300)">&#10094;</button>
+                    <button class="carousel-nav-btn" onclick="rolarCarrossel('carousel-brinquedos', 300)">&#10095;</button>
+                </div>
+            </div>
 
-        <div class="groudon">
+            <div id="carousel-brinquedos" class="groudon">
+                <article class="rayquaza">
+                    <img src="img/mordedor_para_cachorro_dental_flex_11153_1_edf6c99fe6308181fc1a386063111ad1.webp" alt="brinquedo para pets">
+                    <h3>Mordedor Dental</h3>
+                    <p>Mordedor flexível para limpeza dos dentes</p>
+                    <span>R$ 37,90</span>
+                    <button onclick="adicionarAoCarrinho('Mordedor Dental', 37.90)">Comprar</button>
+                </article>
+                <article class="rayquaza">
+                    <img src="img/frango.jpg" alt="brinquedo para pets">
+                    <h3>Frango Sonoro</h3>
+                    <p>Brinquedo de galinha barulhenta</p>
+                    <span>R$ 31,90</span>
+                    <button onclick="adicionarAoCarrinho('Frango Sonoro', 31.90)">Comprar</button>
+                </article>
+                <article class="rayquaza">
+                    <img src="img/arranhador-para-gatos-poste-sisal-2-bases-brinquedo-bolinha-cinza-agrobees.webp" alt="brinquedo para pets">
+                    <h3>Arranhador Sisal</h3>
+                    <p>Arranhador com poste de sisal e bolinha</p>
+                    <span>R$ 84,90</span>
+                    <button onclick="adicionarAoCarrinho('Arranhador Sisal', 84.90)">Comprar</button>
+                </article>
+                <article class="rayquaza">
+                    <img src="img/D_Q_NP_971983-MLB90456276265_082025-F-brinquedo-para-pet-cao--poliester--pelucia-pato.webp" alt="brinquedo para pets">
+                    <h3>Pato de Pelúcia</h3>
+                    <p>Pelúcia macia ideal para filhotes</p>
+                    <span>R$ 24,90</span>
+                    <button onclick="adicionarAoCarrinho('Pato de Pelúcia', 24.90)">Comprar</button>
+                </article>
+                <article class="rayquaza">
+                    <img src="img/BolaCravinhoRosa_5e7bc605e4c2d.jpg" alt="brinquedo para pets">
+                    <h3>Bolinha com Cravos</h3>
+                    <p>Bola de borracha massageadora</p>
+                    <span>R$ 57,90</span>
+                    <button onclick="adicionarAoCarrinho('Bolinha com Cravos', 57.90)">Comprar</button>
+                </article>
+                <!-- Produto Extra Adicionado -->
+                <article class="rayquaza">
+                    <img src="img/frango.jpg" alt="Corda Brinquedo">
+                    <h3>Corda Nó Duplo</h3>
+                    <p>Corda resistente para cabo de guerra</p>
+                    <span>R$ 29,90</span>
+                    <button onclick="adicionarAoCarrinho('Corda Nó Duplo', 29.90)">Comprar</button>
+                </article>
+            </div>
+        </section>
 
-            <article class="rayquaza">
-                <img src="img/shopping.webp" alt="ração para cachorro">
-                <h3>Ração premium</h3>
-                <p>Ração para cães adultos</p>
+        <hr>
 
-                <span>R$500,90</span>
-                <button>Comprar</button>
+        <!-- SEÇÃO 4: ITENS BÁSICOS (COM CARROSSEL) -->
+        <section class="kyogre">
+            <div class="section-header-box">
+                <h2>Itens Básicos</h2>
+                <div class="carousel-nav-btns">
+                    <button class="carousel-nav-btn" onclick="rolarCarrossel('carousel-basicos', -300)">&#10094;</button>
+                    <button class="carousel-nav-btn" onclick="rolarCarrossel('carousel-basicos', 300)">&#10095;</button>
+                </div>
+            </div>
 
-            </article>
-            <article class="rayquaza">
-                <img src="img/10001305000322_1731597454809.jpg" alt="ração para cachorro">
-                <h3>Ração de frango</h3>
-                <p>Alimento complemento para cães</p>
-                <span>R$351,90</span>
-                <button>Comprar</button>
-            </article>
-            <article class="rayquaza">
-                <img src="img/D_Q_NP_819034-MLA117486278593_092026-F.webp" alt="ração para cachorro">
-                <h3>Ração de carne</h3>
-                <p>Ração sabor carne</p>
-                <span>R$312,90</span>
-                <button>Comprar</button>
-            </article>
-            <article class="rayquaza">
-                <img src="img/700770_01.webp" alt="ração para cachorro">
-                <h3>Ração para filhotes</h3>
-                <p>Ideal para cães filhotes</p>
-                <span>R$354,90</span>
-                <button>Comprar</button>
-            </article>
-            <article class="rayquaza">
-                <img src="img/348300-1.webp" alt="ração para cachorro">
-                <h3>Ração Especial</h3>
-                <p>Alimentação para reabastecer vitaminas</p>
-                <span>R$457,90</span>
-                <button>Comprar</button>
-            </article>
-        </div>
-    </section>
-    <hr>
-    <section class="kyogre">
+            <div id="carousel-basicos" class="groudon">
+                <article class="rayquaza">
+                    <img src="img/d093f73ee4c8cb69afca012037934781.webp" alt="pote de ração">
+                    <h3>Pote Inox</h3>
+                    <p>Pote higiênico para ração ou água</p>
+                    <span>R$ 100,30</span>
+                    <button onclick="adicionarAoCarrinho('Pote Inox', 100.30)">Comprar</button>
+                </article>
+                <article class="rayquaza">
+                    <img src="img/D_Q_NP_606030-MLB100475223686_122025-F-cama-cachorro-gato-ninho-caminha-pet-redonda-prata.webp" alt="caminha para pets">
+                    <h3>Caminha Confort</h3>
+                    <p>Cama redonda macia para cães e gatos</p>
+                    <span>R$ 151,90</span>
+                    <button onclick="adicionarAoCarrinho('Caminha Confort', 151.90)">Comprar</button>
+                </article>
+                <article class="rayquaza">
+                    <img src="img/D_Q_NP_900179-MLB117823531487_092026-F-bebedouro-automatico-inox-22l-com-filtro-para-gatos-e-caes.webp" alt="bebedouro para gatos">
+                    <h3>Bebedouro Automático</h3>
+                    <p>Fonte com filtro para água fresca</p>
+                    <span>R$ 132,90</span>
+                    <button onclick="adicionarAoCarrinho('Bebedouro Automático', 132.90)">Comprar</button>
+                </article>
+                <article class="rayquaza">
+                    <img src="img/coleira de gato.jpg" alt="coleira para gatos">
+                    <h3>Coleira para Gatos</h3>
+                    <p>Coleira leve com fecho de segurança</p>
+                    <span>R$ 44,90</span>
+                    <button onclick="adicionarAoCarrinho('Coleira para Gatos', 44.90)">Comprar</button>
+                </article>
+                <article class="rayquaza">
+                    <img src="img/coleira_para_cachorro_kit_peitoral_h_guia_selva_321_2_01baf732f51546595617eb4c06ae01be.webp" alt="coleira para cachorro">
+                    <h3>Kit Peitoral H</h3>
+                    <p>Peitoral e guia confortáveis para cães</p>
+                    <span>R$ 87,90</span>
+                    <button onclick="adicionarAoCarrinho('Kit Peitoral H', 87.90)">Comprar</button>
+                </article>
+                <!-- Produto Extra Adicionado -->
+                <article class="rayquaza">
+                    <img src="img/d093f73ee4c8cb69afca012037934781.webp" alt="Tapete Higiênico">
+                    <h3>Tapete Higiênico</h3>
+                    <p>Pacote com 30 unidades super absorventes</p>
+                    <span>R$ 69,90</span>
+                    <button onclick="adicionarAoCarrinho('Tapete Higiênico (30 un)', 69.90)">Comprar</button>
+                </article>
+            </div>
+        </section>
 
-        <h2>Ração para Gatos</h2>
+    </main>
 
-        <div class="groudon">
-
-            <article class="rayquaza">
-                <img src="img/3109559.jpg" alt="ração para gato">
-                <h3>Ração premium</h3>
-                <p>Ração para gatos adultos</p>
-                <span>R$500,90</span>
-                <button>Comprar</button>
-            </article>
-            <article class="rayquaza">
-                <img src="img/1726842486329.jpg" alt="ração para gato">
-                <h3>Ração de mix de carnes</h3>
-                <p>ideal para gatos castrados</p>
-                <span>R$351,90</span>
-                <button>Comprar</button>
-            </article>
-            <article class="rayquaza">
-                <img src="img/download.jpg" alt="ração para gato">
-                <h3>Ração de peixe</h3>
-                <p>Ração sabor peixe</p>
-                <span>R$312,90</span>
-                <button>Comprar</button>
-            </article>
-            <article class="rayquaza">
-                <img src="img/179_Origens_select_gatos_filhotes_frango_frente.webp" alt="ração para gato">
-                <h3>Ração para filhotes</h3>
-                <p>Ideal para gatos filhotes</p>
-                <span>R$354,90</span>
-                <button>Comprar</button>
-            </article>
-            <article class="rayquaza">
-                <img src="img/D_Q_NP_653171-MLA109271721264_042026-F.webp" alt="ração para gato">
-                <h3>Ração Especial</h3>
-                <p>Alimentação para reabastecer vitaminas</p>
-                <span>R$457,90</span>
-                <button>Comprar</button>
-            </article>
-        </div>
-    </section>
-    <hr>
-    <section class="kyogre">
-        <h2>Brinquedos para pets</h2>
-        <div class="groudon">
-            <article class="rayquaza">
-                <img src="img/mordedor_para_cachorro_dental_flex_11153_1_edf6c99fe6308181fc1a386063111ad1.webp" alt="brinquedo para pets">
-                <h3>Mordedor</h3>
-                <p>Mordedor para cachorros</p>
-                <span>R$37,90</span>
-                <button>Comprar</button>
-            </article>
-            <article class="rayquaza">
-                <img src="img/frango.jpg" alt="brinquedo para pets">
-                <h3>Frango</h3>
-                <p>Brinquedo de galinha</p>
-                <span>R$31,90</span>
-                <button>Comprar</button>
-            </article>
-            <article class="rayquaza">
-                <img src="img/arranhador-para-gatos-poste-sisal-2-bases-brinquedo-bolinha-cinza-agrobees.webp" alt="brinquedo para pets">
-                <h3>Arranhador</h3>
-                <p>Arranhador para gatos</p>
-                <span>R$84,90</span>
-                <button>Comprar</button>
-            </article>
-            <article class="rayquaza">
-                <img src="img/D_Q_NP_971983-MLB90456276265_082025-F-brinquedo-para-pet-cao--poliester--pelucia-pato.webp" alt="brinquedo para pets">
-                <h3>Pato de pelúcia</h3>
-                <p>Pelúcia para filhotes</p>
-                <span>R$24,90</span>
-                <button>Comprar</button>
-            </article>
-            <article class="rayquaza">
-                <img src="img/BolaCravinhoRosa_5e7bc605e4c2d.jpg" alt="brinquedo para pets">
-                <h3>Bolinha</h3>
-                <p>Bola para cachorros</p>
-                <span>R$57,90</span>
-                <button>Comprar</button>
-            </article>
-        </div>
-    </section>
-    <hr>
-    <section class="kyogre">
-        <h2>Itens básicos</h2>
-        <div class="groudon">
-            <article class="rayquaza">
-                <img src="img/d093f73ee4c8cb69afca012037934781.webp" alt="pote de ração">
-                <h3>Pote de ração</h3>
-                <p>Pote para colocar ração</p>
-                <span>R$100,30</span>
-                <button>Comprar</button>
-            </article>
-            <article class="rayquaza">
-                <img src="img/D_Q_NP_606030-MLB100475223686_122025-F-cama-cachorro-gato-ninho-caminha-pet-redonda-prata.webp" alt="caminha para pets">
-                <h3>Cama para pets</h3>
-                <p>Cama para qualquer pet como gatos e cachorros</p>
-                <span>R$151,90</span>
-                <button>Comprar</button>
-            </article>
-            <article class="rayquaza">
-                <img src="img/D_Q_NP_900179-MLB117823531487_092026-F-bebedouro-automatico-inox-22l-com-filtro-para-gatos-e-caes.webp" alt="bebedouro para gatos">
-                <h3>Bebedouro</h3>
-                <p>Bebedouro para gatos</p>
-                <span>R$132,90</span>
-                <button>Comprar</button>
-            </article>
-            <article class="rayquaza">
-                <img src="img/coleira de gato.jpg" alt="coleira para gatos">
-                <h3>Coleira para gatos</h3>
-                <p>Coleira específica para gatos</p>
-                <span>R$44,90</span>
-                <button>Comprar</button>
-            </article>
-            <article class="rayquaza">
-                <img src="img/coleira_para_cachorro_kit_peitoral_h_guia_selva_321_2_01baf732f51546595617eb4c06ae01be.webp" alt="coleira para cachorro">
-                <h3>Coleira para cachorro</h3>
-                <p>Ideal para cães adultos </p>
-                <span>R$87,90</span>
-                <button>Comprar</button>
-            </article>
-        </div>
-    </section>
-    <!-- BOTÃO FLUTUANTE E SIDEBAR DO CARRINHO -->
-    <button id="cart-btn" class="cart-btn" onclick="toggleCart()">
-        🛒 Carrinho (<span id="cart-count">0</span>)
-    </button>
+ 
 
     <aside id="cart-sidebar" class="cart-sidebar">
         <div class="cart-header">
-            <h2>Seu Carrinho</h2>
+            <h2>🛒 Seu Carrinho</h2>
             <button class="close-btn" onclick="toggleCart()">&times;</button>
         </div>
 
         <div id="cart-items" class="cart-items">
-            <!-- Os itens adicionados aparecerão aqui via JavaScript -->
+            <!-- Os itens adicionados aparecem aqui -->
         </div>
 
         <div class="cart-footer">
+            <div class="payment-box">
+                <label for="forma-pagamento">Forma de Pagamento:</label>
+                <select id="forma-pagamento">
+                    <option value="PIX (5% de desconto)">PIX</option>
+                    <option value="Cartão de Crédito">Cartão de Crédito</option>
+                    <option value="Cartão de Débito">Cartão de Débito</option>
+                    <option value="Dinheiro no local">Dinheiro no local</option>
+                </select>
+            </div>
+
             <div class="cart-total">
-                <span>Total:</span>
+                <span>Total Acumulado:</span>
                 <span id="cart-total-price">R$ 0,00</span>
             </div>
-            <button class="checkout-btn" onclick="checkout()">Finalizar Compra</button>
+
+            <button class="checkout-btn" onclick="confirmarPedido()">Confirmar Pedido</button>
+            <div id="pedido-status" class="pedido-status" hidden></div>
         </div>
     </aside>
 
     <div id="cart-overlay" class="cart-overlay" onclick="toggleCart()"></div>
 
-    <!-- SCRIPT DO CARRINHO -->
+    <!-- SCRIPTS -->
     <script src="carrinho.js"></script>
+    <script src="petshop.js"></script>
 </body>
+
 </html>

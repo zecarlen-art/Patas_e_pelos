@@ -1,211 +1,322 @@
+/* Variáveis de Cores Alinhadas ao Site */
+:root {
+    --bg-cream: #FDF8F2;
+    --bg-sand: #F4E9DC;
+    --bg-white: #FFFFFF;
+    --brown-dark: #5C4033;
+    --brown-medium: #8B5A2B;
+    --blue-accent: #4A90E2;
+    --blue-hover: #357ABD;
+    --text-dark: #333333;
+    --text-muted: #666666;
+    --border-light: #EAE0D5;
+}
+
 * {
     margin: 0;
     padding: 0;
-    outline: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-/* Inicio Header */
-
-header {
-    background-color: #FFF4E6;
-    height: 100px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 28px;
-    position: fixed;
-    top: 0;
-    z-index: 9;
-    
+body {
+    background-color: var(--bg-white);
+    color: var(--text-dark);
+    line-height: 1.6;
 }
 
-/* Logo */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ================= HEADER / MENU ================= */
+header {
+    background-color: var(--bg-cream);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-light);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--brown-dark);
+}
 
 .popplio img {
-    width: 100px;
+    width: 65px;
     height: auto;
     display: block;
 }
 
-/* Menu */
-
-.brionne {
-    display: flex;
-    align-items: center;
-}
-
-.primarina {
-    display: flex;
-    align-items: center;
+nav ul {
     list-style: none;
-}
-
-.primarina a {
-    text-decoration: none;
-    color: #5DADE2;
-    padding: 20px;
-}
-
-.primarina a:hover {
-    color: #5DADE2;
-}
-
-/* Fim do Header */
-
-.nihilego{
-    width: 100%;
-    background-color:#E8D5BE;
-    height: calc(100vh - 80px);
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    background-size: cover;
-    background-position: center;
     display: flex;
     align-items: center;
-    padding-left: 10%;
-     justify-content: space-between;
-     
-        }
-.steene{
-    width: 880px;
-    height: 350px;
-    padding: 24px;
-    border: 2px solid #795548;
-    border-radius: 12px;
-    background-color: #5DADE2;
+    gap: 25px;
 }
-.steene h1{
-   color: #4d2d21;
-   font-size: 51px;
+
+nav ul li a {
+    font-weight: 700;
+    color: var(--brown-dark);
+    font-size: 0.95rem;
+    transition: color 0.2s;
 }
-.steene p{
-    color:#2e1c04;
-    font-size: 25px;
+
+nav ul li a:hover,
+nav ul li a.active-link {
+    color: var(--blue-accent);
 }
-.nihilego img{
-    max-width: 600px;
-    border-radius: 75px;
-    box-shadow: 9px 9px 18px #795548;
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
-.cosmog {
-    background-color: #8B5E3C;
+
+.btn-login {
+    background-color: var(--brown-dark);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.btn-login:hover {
+    background-color: var(--brown-medium);
+}
+
+/* ================= HERO / APRESENTAÇÃO ================= */
+.nihilego {
     width: 100%;
-    padding: 80px 10%;
-    box-sizing: border-box;
+    background-color: var(--bg-sand);
+    padding: 70px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.steene {
+    flex: 1;
+    max-width: 600px;
+    padding: 30px;
+    border: 2px solid var(--brown-medium);
+    border-radius: 20px;
+    background-color: var(--bg-white);
+    box-shadow: 0 10px 25px rgba(92, 64, 51, 0.08);
+}
+
+.steene h1 {
+    color: var(--brown-dark);
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.steene p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.nihilego img {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 15px 30px rgba(92, 64, 51, 0.15);
+    object-fit: cover;
+}
+
+/* ================= BENEFÍCIOS E REGRAS ================= */
+.cosmog {
+    background-color: var(--brown-medium);
+    width: 100%;
+    padding: 70px 10%;
     display: flex;
     align-items: stretch;
     justify-content: center;
     gap: 30px;
+    flex-wrap: wrap;
 }
+
 .cosmoem {
-    width: 500px;
-    min-height: 350px;
-    padding: 25px;
-    background-color: #FFF4E6;
+    flex: 1;
+    min-width: 300px;
+    max-width: 550px;
+    padding: 30px;
+    background-color: var(--bg-cream);
     border-radius: 20px;
-    box-shadow: 0 5px 15px #00000020;
-    box-sizing: border-box;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
+
 .cosmoem h1 {
-    color: #4A1515;
-    font-size: 40px;
-    margin-top: 0;
+    color: var(--brown-dark);
+    font-size: 1.8rem;
+    font-weight: 800;
     margin-bottom: 20px;
 }
+
 .cosmoem h1 span {
-    color: #5DADE2;
+    color: var(--blue-accent);
 }
+
 .cosmoem h2 {
-    color: #990d0d;
-    font-size: 35px;
-    margin-top: 0;
+    color: var(--brown-dark);
+    font-size: 1.8rem;
+    font-weight: 800;
     margin-bottom: 20px;
 }
+
 .cosmoem ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
+
 .cosmoem ul li {
-    background-color: #FFF4E6;
-    color: #5D4037;
+    background-color: var(--bg-white);
+    color: var(--text-dark);
     padding: 12px 15px;
     margin-bottom: 10px;
     border-radius: 10px;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 1px solid var(--border-light);
 }
-.lunala {
-    width: 100%;
+
+/* ================= SEÇÃO DE PREÇOS ================= */
+.necrozma {
+    background-color: var(--bg-cream);
+    padding: 70px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.necrozma{
- background-color: #E8D5BE;
- margin: 0;
- height:calc(100vh - 80px);
- display: flex;
- justify-content: center;
- align-items: center;
- 
-}
+
 .solgaleo {
-    width: 700px;
-    min-height: 700px;
-    padding: 35px;
-    margin: 40px auto;
-    background-color: #8B5E3C;
+    width: 100%;
+    max-width: 750px;
+    padding: 40px;
+    background-color: var(--bg-white);
     border-radius: 25px;
-    box-shadow: 0 5px 20px #00000025;
-    box-sizing: border-box;
+    box-shadow: 0 10px 30px rgba(92, 64, 51, 0.08);
+    border: 1px solid var(--border-light);
     text-align: center;
-    margin-top: 120px;
 }
 
 .solgaleo h1 {
-    color: #3b2418;
-    font-size: 32px;
-    margin-bottom: 25px;
+    color: var(--brown-dark);
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
 }
 
 .solgaleo img {
     width: 100%;
-    height: 300px;
+    height: 280px;
     object-fit: cover;
     border-radius: 18px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .solgaleo h2 {
-    color: #3b2418;
-    font-size: 24px;
-    margin-bottom: 15px;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    font-weight: 600;
 }
 
-.solgaleo table {
+/* Tabela de Preços */
+.price-table {
     width: 100%;
     border-collapse: collapse;
-    background-color: white;
+    background-color: var(--bg-white);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-light);
 }
 
-.solgaleo th {
-    background-color: #5DADE2;
+.price-table th {
+    background-color: var(--brown-dark);
     color: white;
     padding: 15px;
+    font-size: 1rem;
+    font-weight: 700;
 }
 
-.solgaleo td {
-    padding: 14px;
-    color: #352019;
-    border-bottom: 1px solid #e0cdb8;
+.price-table td {
+    padding: 14px 15px;
+    color: var(--text-dark);
+    border-bottom: 1px solid var(--border-light);
+    font-weight: 600;
+    text-align: left;
+}
+
+.price-val {
+    color: var(--brown-dark);
+    font-weight: 800 !important;
+}
+
+.btn-add-mini {
+    background-color: var(--blue-accent);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-add-mini:hover {
+    background-color: var(--blue-hover);
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background-color: var(--brown-dark);
+    color: var(--bg-cream);
+    padding: 40px 5%;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer-copy {
+    margin-top: 8px;
+    opacity: 0.8;
+}
+
+/* ================= RESPONSIVIDADE ================= */
+@media (max-width: 850px) {
+    .nihilego {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cosmog {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul {
+        display: none;
+    }
+    .solgaleo {
+        padding: 20px;
+    }
 }
