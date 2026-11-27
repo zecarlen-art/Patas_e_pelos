@@ -1,7 +1,6 @@
-/* Variáveis de Cores Alinhadas ao Site */
+/* Variáveis de Cores */
 :root {
     --bg-cream: #FDF8F2;
-    --bg-sand: #F4E9DC;
     --bg-white: #FFFFFF;
     --brown-dark: #5C4033;
     --brown-medium: #8B5A2B;
@@ -17,10 +16,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
@@ -101,171 +96,161 @@ nav ul li a.active-link {
     background-color: var(--brown-medium);
 }
 
-/* ================= CONTEÚDO PRINCIPAL ================= */
-.petshop-main {
-    padding-top: 130px;
-    padding-bottom: 60px;
+/* ================= VITRINE PETSHOP EM GRADE ================= */
+.shop-section {
+    background-color: #FAFAFA;
+    padding: 60px 5%;
+    min-height: 80vh;
 }
 
-.page-main-title {
+.shop-header {
     text-align: center;
-    font-size: 38px;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 2.2rem;
     color: var(--brown-dark);
     font-weight: 800;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
-.page-main-subtitle {
-    text-align: center;
-    font-size: 18px;
+.section-subtitle {
     color: var(--text-muted);
-    margin-bottom: 20px;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
 }
 
-/* ================= SEÇÕES E CARROSSEL ================= */
-.kyogre {
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-
-.section-header-box {
+/* Filtro de Categorias (Pills) */
+.categories-bar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-    padding: 0 10px;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 45px;
 }
 
-.kyogre h2 {
-    font-size: 28px;
-    color: var(--brown-dark);
-    font-weight: 800;
-}
-
-/* Botões de navegação do carrossel */
-.carousel-nav-btns {
-    display: flex;
-    gap: 10px;
-}
-
-.carousel-nav-btn {
-    background-color: var(--brown-dark);
-    color: white;
-    border: none;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    font-size: 16px;
+.cat-pill {
+    padding: 8px 22px;
+    border-radius: 20px;
+    background-color: white;
+    border: 1px solid #DDD;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text-dark);
     cursor: pointer;
+    transition: all 0.2s;
+}
+
+.cat-pill.active, 
+.cat-pill:hover {
+    background-color: var(--blue-accent);
+    color: white;
+    border-color: var(--blue-accent);
+}
+
+/* Grade de Produtos */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #EAEAEA;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.product-card:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transform: translateY(-4px);
+}
+
+.product-card.hidden {
+    display: none !important;
+}
+
+.product-img {
+    height: 150px;
+    background-color: var(--bg-cream);
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.2s;
-}
-
-.carousel-nav-btn:hover {
-    background-color: var(--brown-medium);
-}
-
-/* Container de rolagem horizontal (Carrossel) */
-.groudon {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 10px 5px 25px 5px;
-    scrollbar-width: thin;
-    scrollbar-color: var(--brown-medium) transparent;
-}
-
-.groudon::-webkit-scrollbar {
-    height: 8px;
-}
-
-.groudon::-webkit-scrollbar-thumb {
-    background-color: var(--brown-medium);
-    border-radius: 10px;
-}
-
-/* Cards de Produtos */
-.rayquaza {
-    width: 230px;
-    min-width: 230px;
-    height: 380px;
-    background-color: var(--bg-cream);
-    padding: 18px;
-    border-radius: 18px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.rayquaza:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
-}
-
-.rayquaza img {
-    width: 100%;
-    height: 150px;
-    object-fit: contain;
+    overflow: hidden; 
     margin-bottom: 12px;
 }
 
-.rayquaza h3 {
-    font-size: 17px;
-    color: var(--brown-dark);
-    margin-bottom: 6px;
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.product-cat {
+    font-size: 0.75rem;
+    color: var(--blue-accent);
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.product-card h4 {
+    font-size: 1.05rem;
+    color: var(--text-dark);
+    margin: 6px 0 10px;
     font-weight: 700;
 }
 
-.rayquaza p {
-    font-size: 13px;
-    color: var(--text-muted);
-    line-height: 1.4;
-    margin-bottom: auto;
-}
-
-.rayquaza span {
-    display: block;
-    font-size: 19px;
+.product-price {
+    font-size: 1.25rem;
     font-weight: 800;
-    color: var(--brown-medium);
-    margin-top: 10px;
+    color: var(--brown-dark);
+    margin-bottom: 15px;
 }
 
-.rayquaza button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 12px;
+.btn-buy {
+    background-color: var(--blue-accent);
+    color: white;
     border: none;
+    padding: 11px;
     border-radius: 10px;
-    background-color: var(--brown-medium);
-    color: #fff;
-    font-size: 14px;
-    font-weight: bold;
+    font-weight: 700;
     cursor: pointer;
+    width: 100%;
     transition: background 0.2s;
 }
 
-.rayquaza button:hover {
-    background-color: var(--brown-dark);
+.btn-buy:hover {
+    background-color: var(--blue-hover);
 }
 
-hr {
-    border: none;
-    height: 2px;
-    background-color: var(--brown-medium);
-    margin: 10px 50px;
-    opacity: 0.4;
+/* ================= FOOTER ================= */
+footer {
+    background-color: var(--brown-dark);
+    color: var(--bg-cream);
+    padding: 40px 5%;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 50px;
+}
+
+.footer-copy {
+    margin-top: 8px;
+    opacity: 0.8;
 }
 
 /* ================= RESPONSIVIDADE ================= */
 @media (max-width: 850px) {
-    .primarina {
+    nav ul {
         display: none;
     }
 }

@@ -1,33 +1,75 @@
-// entrar.js - Patas & Pelos
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Envio do login
-    document.querySelector('#login form').addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('Login enviado com sucesso!');
-    });
-  
-    // Envio do cadastro com verificação de senhas
-    const senha = document.getElementById('senha-cadastro');
-    const confirmar = document.getElementById('confirmar');
-  
-    document.querySelector('#cadastro form').addEventListener('submit', (e) => {
-      e.preventDefault();
-  
-      if (senha.value !== confirmar.value) {
-        confirmar.setCustomValidity('As senhas não coincidem.');
+/* ALTERNAR ENTRE LOGIN E CADASTRO */
+
+function mostrarLogin() {
+
+    document.getElementById("formLogin").classList.remove("escondido");
+    document.getElementById("formCadastro").classList.add("escondido");
+
+    document.getElementById("abaLogin").classList.add("ativa");
+    document.getElementById("abaCadastro").classList.remove("ativa");
+
+}
+
+function mostrarCadastro() {
+
+    document.getElementById("formCadastro").classList.remove("escondido");
+    document.getElementById("formLogin").classList.add("escondido");
+
+    document.getElementById("abaCadastro").classList.add("ativa");
+    document.getElementById("abaLogin").classList.remove("ativa");
+
+}
+
+/* LOGIN */
+
+function entrar(event) {
+
+    event.preventDefault();
+
+    alert("Login enviado com sucesso!");
+
+}
+
+/* CADASTRO */
+
+function cadastrar(event) {
+
+    event.preventDefault();
+
+    const senha = document.getElementById("senhaCadastro").value;
+    const confirmar = document.getElementById("confirmar");
+
+    if (senha !== confirmar.value) {
+
+        confirmar.setCustomValidity("As senhas não coincidem.");
         confirmar.reportValidity();
+
         return;
-      }
-      confirmar.setCustomValidity('');
-  
-      alert('Cadastro enviado com sucesso!');
-      e.target.reset();
-    });
-  
-    // Remove a mensagem de erro ao digitar novamente
-    confirmar.addEventListener('input', () => confirmar.setCustomValidity(''));
-  });
-  
-  
-  
+    }
+
+    confirmar.setCustomValidity("");
+
+    alert("Cadastro realizado com sucesso!");
+
+    document.getElementById("formCadastro").reset();
+
+}
+
+/* LIMPAR ERRO DA SENHA */
+
+document.getElementById("confirmar").addEventListener("input", function() {
+    this.setCustomValidity("");
+});
+
+function validarCadastro() {
+    const senha = document.getElementById("senha").value;
+    const confirmar = document.getElementById("confirmar").value;
+
+    if (senha !== confirmar) {
+        alert("As senhas não são iguais!");
+        return false;
+    }
+
+    return true;
+}
